@@ -311,14 +311,16 @@ class _MeasurementScreenState extends ConsumerState<MeasurementScreen>
                             }
 
                             final double footerHeight = isMobile
-                                ? getResponsiveSize(160.0)
+                                ? getResponsiveSize(250.0)
                                 : double.infinity;
 
                             return Align(
-                              alignment: Alignment.bottomCenter,
+                              alignment: isMobile
+                                  ? Alignment.center
+                                  : Alignment.bottomCenter,
                               child: Padding(
                                 padding: EdgeInsets.only(
-                                    bottom: isMobile ? 24.0 : 0.0),
+                                    bottom: isMobile ? 0.0 : 0.0),
                                 child: SizedBox(
                                   height: footerHeight,
                                   child: MeasurementFooter(

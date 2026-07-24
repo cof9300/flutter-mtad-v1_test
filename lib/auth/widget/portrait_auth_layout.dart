@@ -46,9 +46,11 @@ class PortraitAuthLayout extends ConsumerWidget {
     final spacing = _getResponsiveSize(context, 40);
     final largeSpacing = _getResponsiveSize(context, 60);
     final isMobile = screenWidth < 600;
-    final buttonWidth = (screenWidth * 0.85).clamp(300.0, 550.0);
+    final buttonWidth = isMobile
+        ? (screenWidth * 0.65).clamp(240.0, 320.0)
+        : (screenWidth * 0.85).clamp(300.0, 550.0);
     final fontSize = isMobile
-        ? _getResponsiveSize(context, 48)
+        ? _getResponsiveSize(context, 40)
         : _getResponsiveSize(context, 40);
 
     final locale = ref.watch(localeProvider);
@@ -133,7 +135,7 @@ class PortraitAuthLayout extends ConsumerWidget {
                               decoration: BoxDecoration(
                                 color: Color(0xFF227EFF),
                                 borderRadius: BorderRadius.circular(
-                                    _getResponsiveSize(context, 16)),
+                                    isMobile ? 8.0 : _getResponsiveSize(context, 16)),
                               ),
                               alignment: Alignment.center,
                               child: Text(

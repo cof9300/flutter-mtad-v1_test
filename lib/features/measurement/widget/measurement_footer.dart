@@ -96,16 +96,17 @@ class _MeasurementFooterState extends State<MeasurementFooter> {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final isKiosk = DeviceConfig().isLargeKiosk(context);
-    final horizontalPadding = _getResponsiveSize(context, isKiosk ? 56.0 : 38.0);
     final isMobile = screenWidth < 600;
-    final verticalPadding = isMobile 
-        ? 10.0 
-        : _getResponsiveSize(context, isKiosk ? 80.0 : 38.0);
-    final contentScale = isKiosk ? 1.0 : 0.7;
+    final horizontalPadding = isMobile
+        ? 15.0 // 기존 여백(약 19.0)의 절반 수준으로 줄여서 가로를 더 늘립니다.
+        : _getResponsiveSize(context, isKiosk ? 56.0 : 38.0);
+    final verticalPadding =
+        isMobile ? 10.0 : _getResponsiveSize(context, isKiosk ? 80.0 : 38.0);
+    final contentScale = isMobile ? 1.0 : (isKiosk ? 1.0 : 0.7);
     final fontSize = _getResponsiveSize(context, 42 * contentScale);
     final iconSize = _getResponsiveSize(context, 60 * contentScale);
     final gap = _getResponsiveSize(context, 10 * contentScale);
-    final borderRadius = _getResponsiveSize(context, 40);
+    final borderRadius = isMobile ? 12.0 : _getResponsiveSize(context, 40);
     final buttonWidth = screenWidth - (horizontalPadding * 2);
     final gaugeHeight = widget.height == double.infinity
         ? double.infinity

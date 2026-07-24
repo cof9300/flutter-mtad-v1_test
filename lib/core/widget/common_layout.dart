@@ -89,7 +89,8 @@ class _CommonLayoutState extends ConsumerState<CommonLayout> {
       _ensureTabletDimensionsCached(context);
       return _tabletHeaderHeight!;
     }
-    if (isMobile || isSmall) return _getResponsiveSize(context, 160.0);
+    if (isMobile) return 60.0;
+    if (isSmall) return _getResponsiveSize(context, 160.0);
     return _getResponsiveSize(context, 120.0);
   }
 
@@ -170,17 +171,18 @@ class _CommonLayoutState extends ConsumerState<CommonLayout> {
 
   Widget _buildHeader(BuildContext context) {
     final isTablet = DeviceConfig().isTabletSized(context);
+    final isMobile = MediaQuery.of(context).size.width < 600;
     if (isTablet) _ensureTabletDimensionsCached(context);
     final headerHeight = _getHeaderHeight(context);
-    final horizontalPadding = isTablet
-        ? _tabletHPadding!
-        : _getResponsiveSize(context, 40);
-    final logoWidth = isTablet
-        ? _tabletLogoWidth!
-        : _getResponsiveSize(context, 180);
-    final clockWidth = isTablet
-        ? _tabletClockWidth!
-        : _getResponsiveSize(context, 200);
+    final horizontalPadding = isMobile
+        ? 14.0
+        : (isTablet ? _tabletHPadding! : _getResponsiveSize(context, 40));
+    final logoWidth = isMobile
+        ? 65.0
+        : (isTablet ? _tabletLogoWidth! : _getResponsiveSize(context, 180));
+    final clockWidth = isMobile
+        ? 75.0
+        : (isTablet ? _tabletClockWidth! : _getResponsiveSize(context, 200));
 
     final topPadding = MediaQuery.of(context).padding.top;
 
@@ -219,11 +221,12 @@ class _CommonLayoutState extends ConsumerState<CommonLayout> {
 
   Widget _buildLogo(BuildContext context) {
     final isTablet = DeviceConfig().isTabletSized(context);
+    final isMobile = MediaQuery.of(context).size.width < 600;
     if (isTablet) _ensureTabletDimensionsCached(context);
     final headerHeight = _getHeaderHeight(context);
-    final containerWidth = isTablet
-        ? _tabletLogoWidth!
-        : _getResponsiveSize(context, 180);
+    final containerWidth = isMobile
+        ? 65.0
+        : (isTablet ? _tabletLogoWidth! : _getResponsiveSize(context, 180));
     final customLogo = ref.watch(headerLogoProvider);
     final logoUrl = customLogo != null && customLogo.isNotEmpty
         ? '${Config.baseUrl}/$customLogo'
@@ -258,13 +261,17 @@ class _CommonLayoutState extends ConsumerState<CommonLayout> {
     final isLargeKiosk = DeviceConfig().isLargeKiosk(context);
     final isTablet = DeviceConfig().isTabletSized(context);
     final isSmall = _isSmallScreen(context);
+    final isMobile = MediaQuery.of(context).size.width < 600;
     final customTitle = ref.watch(headerTitleProvider);
     final displayTitle = customTitle ?? '';
 
     // 태블릿은 캐시된 값을 사용해 orientation·MediaQuery 변화에 흔들리지 않게 한다.
     final double fontSize;
     final double letterSpacingBase;
-    if (isTablet) {
+    if (isMobile) {
+      fontSize = 16.0;
+      letterSpacingBase = 16.0;
+    } else if (isTablet) {
       _ensureTabletDimensionsCached(context);
       fontSize = _tabletFontSize!;
       letterSpacingBase = _tabletFontSize! * (40.0 / 52.0);
@@ -297,14 +304,17 @@ class _CommonLayoutState extends ConsumerState<CommonLayout> {
 
   Widget _buildClock(BuildContext context) {
     final isTablet = DeviceConfig().isTabletSized(context);
+    final isMobile = MediaQuery.of(context).size.width < 600;
     if (isTablet) _ensureTabletDimensionsCached(context);
     final headerHeight = _getHeaderHeight(context);
-    final clockWidth = isTablet
-        ? _tabletClockWidth!
-        : _getResponsiveSize(context, 200);
-    final fontSize = isTablet
-        ? (_tabletFontSize! * (32.0 / 52.0))
-        : _getResponsiveSize(context, 32);
+    final clockWidth = isMobile
+        ? 75.0
+        : (isTablet ? _tabletClockWidth! : _getResponsiveSize(context, 200));
+    final fontSize = isMobile
+        ? 11.0
+        : (isTablet
+            ? (_tabletFontSize! * (32.0 / 52.0))
+            : _getResponsiveSize(context, 32));
     final locale = ref.watch(localeProvider);
 
     return GestureDetector(

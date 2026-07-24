@@ -1055,7 +1055,7 @@ class _BloodPressureResultScreenNewState
               Padding(
                 padding: EdgeInsets.only(
                   bottom: isMobile
-                      ? (screenHeight < 850 ? 96.0 : 112.0)
+                      ? (screenHeight < 850 ? 150.0 : 175.0)
                       : (DeviceConfig().isTabletSized(context)
                           ? _getResponsiveSize(context, 200)
                           : _getResponsiveSize(context, 320)),
@@ -1151,7 +1151,7 @@ class _BloodPressureResultScreenNewState
                 child: _buildHideButton(context),
               ),
               Positioned(
-                bottom: _getResponsiveSize(context, 40),
+                bottom: isMobile ? 54.0 : _getResponsiveSize(context, 40),
                 left: 0,
                 right: 0,
                 child: _buildBottomButtons(context),
@@ -1251,7 +1251,7 @@ class _BloodPressureResultScreenNewState
     final isMobile = screenWidth < 600;
 
     final lockSize = isMobile
-        ? _getResponsiveSize(context, 160)
+        ? 70.0
         : _getResponsiveSize(context, 240);
     final topSpace = isMobile
         ? 0.0
@@ -1281,10 +1281,10 @@ class _BloodPressureResultScreenNewState
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: AppTextStyles.bodyFontFamily,
-                fontSize: _getResponsiveSize(context, 46),
+                fontSize: isMobile ? 15.0 : _getResponsiveSize(context, 46),
                 fontVariations: <FontVariation>[FontVariation('wght', 700)],
                 color: Color(0xFF227EFF),
-                letterSpacing: -1.6,
+                letterSpacing: isMobile ? -0.8 : -1.6,
               ),
             ),
           ),
@@ -1461,7 +1461,7 @@ class _BloodPressureResultScreenNewState
         ? (screenWidth - 48) / (_isSmsEnabled ? 2 : 1)
         : _getResponsiveSize(context, 498);
     final double height = isMobile
-        ? 64.0
+        ? 100.0
         : _getResponsiveSize(context, 255);
     final double borderRadius = isMobile
         ? 12.0
