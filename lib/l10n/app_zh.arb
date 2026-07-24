@@ -1,0 +1,725 @@
+{
+  "@@locale": "zh",
+  "appTitle": "Flutter 模板",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "headerTitle": "智能健康管理",
+  "@headerTitle": {
+    "description": "The title displayed in the header"
+  },
+  "touchScreenMessage": "请触摸屏幕！",
+  "@touchScreenMessage": {
+    "description": "Message to prompt user to touch the screen"
+  },
+  "authTitle": "请输入您的<b>用户编号</b>或<b>手机号码</b>\n或扫描您的<b>用户条形码</b>或<b>二维码</b>。",
+  "@authTitle": {
+    "description": "Authentication screen title"
+  },
+  "authInputHint": "请输入用户编号或手机号码",
+  "@authInputHint": {
+    "description": "Authentication input field hint"
+  },
+  "authClearAll": "全部清除",
+  "@authClearAll": {
+    "description": "Clear all button text"
+  },
+  "authConfirm": "确认",
+  "@authConfirm": {
+    "description": "Confirm button text"
+  },
+  "loadingDefault": "处理中...",
+  "@loadingDefault": {
+    "description": "Default loading message"
+  },
+  "systemErrorTitle": "系统错误",
+  "@systemErrorTitle": {
+    "description": "System error title"
+  },
+  "systemErrorMessage": "系统发生错误。\n请联系管理员。",
+  "@systemErrorMessage": {
+    "description": "System error message"
+  },
+  "contactAdministrator": "请联系管理员。",
+  "@contactAdministrator": {
+    "description": "Contact administrator message"
+  },
+  "confirm": "确认",
+  "@confirm": {
+    "description": "Confirm button"
+  },
+  "progressTitle": "进行中。",
+  "@progressTitle": {
+    "description": "Progress title"
+  },
+  "progressMessage": "请稍候。",
+  "@progressMessage": {
+    "description": "Progress message"
+  },
+  "invalidPhoneFormatTitle": "输入错误",
+  "@invalidPhoneFormatTitle": {
+    "description": "Invalid phone number format title"
+  },
+  "invalidPhoneFormat": "电话号码格式不正确。\n请输入11位数字。",
+  "@invalidPhoneFormat": {
+    "description": "Invalid phone number format message"
+  },
+  "noMemberFound": "未找到匹配的会员信息。",
+  "@noMemberFound": {
+    "description": "No member information found"
+  },
+  "registerQuestion": "您想用此号码{highlight}吗？",
+  "@registerQuestion": {
+    "description": "Registration confirmation question",
+    "placeholders": {
+      "highlight": {
+        "type": "String"
+      }
+    }
+  },
+  "registerHighlight": "注册",
+  "@registerHighlight": {
+    "description": "Registration highlight text"
+  },
+  "registerPrefix": "您想用此号码",
+  "@registerPrefix": {
+    "description": "Registration question prefix"
+  },
+  "registerSuffix": "吗？",
+  "@registerSuffix": {
+    "description": "Registration question suffix"
+  },
+  "measurementHighlight": "测量",
+  "@measurementHighlight": {
+    "description": "Measurement highlight text"
+  },
+  "measurementQuestion": "您想进行测量吗？",
+  "@measurementQuestion": {
+    "description": "Measurement confirmation question"
+  },
+  "phoneCheckMessage": "请检查您的手机号码。",
+  "@phoneCheckMessage": {
+    "description": "Phone number check message"
+  },
+  "no": "否",
+  "@no": {
+    "description": "No button text"
+  },
+  "yes": "是",
+  "@yes": {
+    "description": "Yes button text"
+  },
+  "registrationCompleteTitle": "注册链接已发送。",
+  "@registrationCompleteTitle": {
+    "description": "Registration complete title"
+  },
+  "registrationCompleteMessage": "请在手机上<c>注册</c>\n然后进行测量。",
+  "@registrationCompleteMessage": {
+    "description": "Registration complete message"
+  },
+  "userConfirmQuestion": "是您本人吗？",
+  "@userConfirmQuestion": {
+    "description": "User confirmation question"
+  },
+  "userConfirmYes": "是的，正确",
+  "@userConfirmYes": {
+    "description": "Yes, that's correct button"
+  },
+  "userConfirmNo": "不是",
+  "@userConfirmNo": {
+    "description": "No button"
+  },
+  "adminPasswordTitle": "管理员密码",
+  "@adminPasswordTitle": {
+    "description": "Admin password dialog title"
+  },
+  "adminPasswordErrorTitle": "错误",
+  "@adminPasswordErrorTitle": {
+    "description": "Admin password error title"
+  },
+  "adminPasswordErrorMessage": "管理员密码不正确。",
+  "@adminPasswordErrorMessage": {
+    "description": "Admin password error message"
+  },
+  "adminSettingsTitle": "管理员设置",
+  "@adminSettingsTitle": {
+    "description": "Admin settings screen title"
+  },
+  "adminPasswordChangeTitle": "更改管理员密码",
+  "@adminPasswordChangeTitle": {
+    "description": "Admin password change title"
+  },
+  "adminCurrentPasswordLabel": "当前密码",
+  "@adminCurrentPasswordLabel": {
+    "description": "Current password label"
+  },
+  "adminNewPasswordLabel": "新密码",
+  "@adminNewPasswordLabel": {
+    "description": "New password label"
+  },
+  "adminConfirmPasswordLabel": "确认新密码",
+  "@adminConfirmPasswordLabel": {
+    "description": "Confirm new password label"
+  },
+  "adminPasswordChangeButton": "更改密码",
+  "@adminPasswordChangeButton": {
+    "description": "Change password button"
+  },
+  "adminPasswordChanging": "更改中...",
+  "@adminPasswordChanging": {
+    "description": "Changing password status"
+  },
+  "adminPasswordAllFieldsRequired": "请输入所有密码为4位数字。",
+  "@adminPasswordAllFieldsRequired": {
+    "description": "All password fields must be 4 digits"
+  },
+  "adminPasswordMismatch": "新密码不匹配。",
+  "@adminPasswordMismatch": {
+    "description": "New passwords do not match"
+  },
+  "adminPasswordCurrentIncorrect": "当前密码不正确。",
+  "@adminPasswordCurrentIncorrect": {
+    "description": "Current password is incorrect"
+  },
+  "adminPasswordChangeSuccess": "密码已更改。",
+  "@adminPasswordChangeSuccess": {
+    "description": "Password changed successfully"
+  },
+  "adminPasswordChangeError": "更改密码时发生错误。",
+  "@adminPasswordChangeError": {
+    "description": "Error occurred while changing password"
+  },
+  "cancel": "取消",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "adminLanguageSelectionTitle": "语言设置",
+  "@adminLanguageSelectionTitle": {
+    "description": "Language selection title"
+  },
+  "languageKorean": "한국어",
+  "@languageKorean": {
+    "description": "Korean language"
+  },
+  "languageEnglish": "English",
+  "@languageEnglish": {
+    "description": "English language"
+  },
+  "deviceTypeBP": "血压",
+  "@deviceTypeBP": {
+    "description": "Blood Pressure device type"
+  },
+  "deviceTypeHS": "身高体重",
+  "@deviceTypeHS": {
+    "description": "Height Scale device type"
+  },
+  "deviceTypeVA": "视力",
+  "@deviceTypeVA": {
+    "description": "Visual Acuity device type"
+  },
+  "deviceTypeCM": "色觉",
+  "@deviceTypeCM": {
+    "description": "Colorimetric device type"
+  },
+  "deviceTypeBC": "体成分",
+  "@deviceTypeBC": {
+    "description": "Body Composition device type"
+  },
+  "deviceTypeBS": "血糖",
+  "@deviceTypeBS": {
+    "description": "Blood Sugar device type"
+  },
+  "deviceTypeHRV": "自主神经（非接触）",
+  "@deviceTypeHRV": {
+    "description": "Heart Rate Variability device type"
+  },
+  "deviceTypeST": "自主神经（接触）",
+  "@deviceTypeST": {
+    "description": "Stress Test device type"
+  },
+  "deviceTypeAL": "酒精",
+  "@deviceTypeAL": {
+    "description": "Alcohol device type"
+  },
+  "deviceTypeHC": "身高体重秤",
+  "@deviceTypeHC": {
+    "description": "Height and weight scale device type"
+  },
+  "deviceTypeMF": "Mediform",
+  "@deviceTypeMF": {
+    "description": "Mediform device type"
+  },
+  "deviceTypeLU": "肺活量",
+  "@deviceTypeLU": {
+    "description": "Lung capacity device type"
+  },
+  "deviceTypeOM": "其他",
+  "@deviceTypeOM": {
+    "description": "Other measuring device type"
+  },
+  "deviceSelectionTitle": "可用设备",
+  "@deviceSelectionTitle": {
+    "description": "Device selection screen title"
+  },
+  "noDevicesAvailable": "没有可用设备",
+  "@noDevicesAvailable": {
+    "description": "No devices available message"
+  },
+  "bloodPressureSample": "血压样本",
+  "@bloodPressureSample": {
+    "description": "Blood pressure sample button"
+  },
+  "bloodPressureResultTitle": "血压测量结果",
+  "@bloodPressureResultTitle": {
+    "description": "Blood pressure result screen title"
+  },
+  "systolicPressure": "收缩压",
+  "@systolicPressure": {
+    "description": "Systolic blood pressure"
+  },
+  "diastolicPressure": "舒张压",
+  "@diastolicPressure": {
+    "description": "Diastolic blood pressure"
+  },
+  "pulse": "脉搏",
+  "@pulse": {
+    "description": "Pulse"
+  },
+  "mmHg": "mmHg",
+  "@mmHg": {
+    "description": "Unit for blood pressure"
+  },
+  "bpm": "bpm",
+  "@bpm": {
+    "description": "Unit for pulse (beats per minute)"
+  },
+  "resultHidden": "隐藏结果",
+  "@resultHidden": {
+    "description": "Hide result button"
+  },
+  "resultHiddenMessage": "结果已隐藏",
+  "@resultHiddenMessage": {
+    "description": "Message when result is hidden"
+  },
+  "videoArea": "视频区域",
+  "@videoArea": {
+    "description": "Video area placeholder"
+  },
+  "remeasure": "重新测量",
+  "@remeasure": {
+    "description": "Remeasure button"
+  },
+  "sendMessage": "发送短信",
+  "@sendMessage": {
+    "description": "Send message button"
+  },
+  "sendMessagePending": "短信发送功能正在准备中。",
+  "@sendMessagePending": {
+    "description": "Message sending feature under preparation"
+  },
+  "bpStatusNormal": "正常",
+  "@bpStatusNormal": {
+    "description": "Normal blood pressure status"
+  },
+  "bpStatusCaution": "注意",
+  "@bpStatusCaution": {
+    "description": "Caution blood pressure status"
+  },
+  "bpStatusPreHypertension": "高血压前期",
+  "@bpStatusPreHypertension": {
+    "description": "Prehypertension status"
+  },
+  "bpStatusHypertension1": "高血压1期",
+  "@bpStatusHypertension1": {
+    "description": "Hypertension stage 1 status"
+  },
+  "bpStatusHypertension2": "高血压2期",
+  "@bpStatusHypertension2": {
+    "description": "Hypertension stage 2 status"
+  },
+  "bpStatusHypertension3": "高血压3期",
+  "@bpStatusHypertension3": {
+    "description": "Hypertension stage 3 status"
+  },
+  "heightWeightResultTitle": "身高体重测量结果",
+  "@heightWeightResultTitle": {
+    "description": "Height and weight measurement result title"
+  },
+  "bmiStatusUnderweight": "体重过轻",
+  "@bmiStatusUnderweight": {
+    "description": "BMI status underweight"
+  },
+  "bmiStatusNormal": "正常",
+  "@bmiStatusNormal": {
+    "description": "BMI status normal"
+  },
+  "bmiStatusPreObese": "超重前期",
+  "@bmiStatusPreObese": {
+    "description": "BMI status pre-obese"
+  },
+  "bmiStatusObese1": "肥胖I级",
+  "@bmiStatusObese1": {
+    "description": "BMI status obesity stage 1"
+  },
+  "bmiStatusObese2": "肥胖II级",
+  "@bmiStatusObese2": {
+    "description": "BMI status obesity stage 2"
+  },
+  "bmiStatusObese3": "肥胖III级",
+  "@bmiStatusObese3": {
+    "description": "BMI status obesity stage 3"
+  },
+  "resultShow": "显示结果",
+  "@resultShow": {
+    "description": "Show result button"
+  },
+  "resultHiddenGuide": "您可以通过短信接收测量结果。",
+  "@resultHiddenGuide": {
+    "description": "Guide message when result is hidden"
+  },
+  "sendMessageSuccess": "测量结果已发送。",
+  "@sendMessageSuccess": {
+    "description": "Message sent successfully"
+  },
+  "sendMessageSuccessHighlight": "测量结果",
+  "@sendMessageSuccessHighlight": {
+    "description": "Highlighted text for message sent"
+  },
+  "sendMessageSuccessSuffix": "已发送。",
+  "@sendMessageSuccessSuffix": {
+    "description": "Suffix after highlight for message sent success"
+  },
+  "languageSelection": "语言选择",
+  "@languageSelection": {
+    "description": "Language selection dialog title"
+  },
+  "languageButton": "Language",
+  "@languageButton": {
+    "description": "Language button label"
+  },
+  "helpButton": "使用指南",
+  "@helpButton": {
+    "description": "Help button label"
+  },
+  "languageKoreanNative": "한국어",
+  "@languageKoreanNative": {
+    "description": "Korean in Korean"
+  },
+  "languageKoreanEng": "korean",
+  "@languageKoreanEng": {
+    "description": "Korean in English"
+  },
+  "languageEnglishNative": "English",
+  "@languageEnglishNative": {
+    "description": "English in English"
+  },
+  "languageEnglishEng": "English",
+  "@languageEnglishEng": {
+    "description": "English in English"
+  },
+  "guestPhoneInputTitle": "请输入您的手机号码。\n测量结果将发送到您的手机。",
+  "@guestPhoneInputTitle": {
+    "description": "Guest phone input screen title"
+  },
+  "guestPhoneInputTitleHighlight1": "手机号码",
+  "@guestPhoneInputTitleHighlight1": {
+    "description": "Highlighted text 1"
+  },
+  "guestPhoneInputTitleHighlight2": "测量结果",
+  "@guestPhoneInputTitleHighlight2": {
+    "description": "Highlighted text 2"
+  },
+  "agreeAllAndSend": "全部同意并发送",
+  "@agreeAllAndSend": {
+    "description": "Agree all and send button"
+  },
+  "termsAgreement": "*条款协议",
+  "@termsAgreement": {
+    "description": "Terms agreement section title"
+  },
+  "privacyPolicy": "隐私政策（必填）",
+  "@privacyPolicy": {
+    "description": "Privacy policy"
+  },
+  "termsOfService": "服务条款（必填）",
+  "@termsOfService": {
+    "description": "Terms of service"
+  },
+  "thirdPartyInfo": "第三方信息（必填）",
+  "@thirdPartyInfo": {
+    "description": "Third party information"
+  },
+  "sensitiveInfo": "敏感信息（必填）",
+  "@sensitiveInfo": {
+    "description": "Sensitive information"
+  },
+  "viewDetails": "查看",
+  "@viewDetails": {
+    "description": "View details button"
+  },
+  "agreementContentUnavailable": "无法加载协议内容，请稍后重试。",
+  "@agreementContentUnavailable": {
+    "description": "Shown when agreement image URL is missing or failed to load"
+  },
+  "bloodPressure": "血压",
+  "@bloodPressure": {
+    "description": "Blood pressure"
+  },
+  "systolicBloodPressure": "收缩压",
+  "@systolicBloodPressure": {
+    "description": "Systolic blood pressure"
+  },
+  "diastolicBloodPressure": "舒张压",
+  "@diastolicBloodPressure": {
+    "description": "Diastolic blood pressure"
+  },
+  "measurementResult": "测量结果",
+  "@measurementResult": {
+    "description": "Measurement result"
+  },
+  "requestAuth": "请求认证",
+  "@requestAuth": {
+    "description": "Request authentication button"
+  },
+  "verificationCode": "验证码",
+  "@verificationCode": {
+    "description": "Verification code"
+  },
+  "enterVerificationCode": "请输入验证码。",
+  "@enterVerificationCode": {
+    "description": "Enter verification code hint"
+  },
+  "enterPhoneNumberCorrectly": "请正确输入手机号码。",
+  "@enterPhoneNumberCorrectly": {
+    "description": "Enter phone number correctly message"
+  },
+  "enterBirthday": "请输入生日。",
+  "@enterBirthday": {
+    "description": "Enter birthday message"
+  },
+  "enterVerificationCode6Digits": "请输入6位验证码。",
+  "@enterVerificationCode6Digits": {
+    "description": "Enter 6-digit verification code message"
+  },
+  "enterVerificationCode4Digits": "请输入4位验证码。",
+  "@enterVerificationCode4Digits": {
+    "description": "Enter 4-digit verification code message"
+  },
+  "requestVerificationCodeFirst": "请先请求验证码。",
+  "@requestVerificationCodeFirst": {
+    "description": "Request verification code first message"
+  },
+  "verificationFailed": "验证失败",
+  "@verificationFailed": {
+    "description": "Verification failed title"
+  },
+  "verificationCodeMismatch": "验证码不匹配。",
+  "@verificationCodeMismatch": {
+    "description": "Verification code mismatch message"
+  },
+  "authRequired": "需要认证",
+  "@authRequired": {
+    "description": "Authentication required title"
+  },
+  "requestAuthFirst": "请先请求认证。",
+  "@requestAuthFirst": {
+    "description": "Request authentication first message"
+  },
+  "error": "错误",
+  "@error": {
+    "description": "Error title"
+  },
+  "authInfoNotFound": "未找到认证信息。",
+  "@authInfoNotFound": {
+    "description": "Authentication info not found message"
+  },
+  "measurementInfoNotFound": "未找到测量信息。",
+  "@measurementInfoNotFound": {
+    "description": "Measurement info not found message"
+  },
+  "enterCorrectPhoneNumber": "请输入正确的手机号码。",
+  "@enterCorrectPhoneNumber": {
+    "description": "Enter correct phone number message"
+  },
+  "enterCorrectBirthday": "请输入正确的生日。",
+  "@enterCorrectBirthday": {
+    "description": "Enter correct birthday message"
+  },
+  "measurementResultNotFound": "未找到测量结果。",
+  "@measurementResultNotFound": {
+    "description": "Measurement result not found message"
+  },
+  "defaultKioskPlace": "Meditech 自助服务终端",
+  "@defaultKioskPlace": {
+    "description": "Default kiosk place name"
+  },
+  "male": "男",
+  "@male": {
+    "description": "Male gender"
+  },
+  "female": "女",
+  "@female": {
+    "description": "Female gender"
+  },
+  "homeScreen": "首页",
+  "@homeScreen": {
+    "description": "Home screen button"
+  },
+  "measurementGuide": "测量指南",
+  "@measurementGuide": {
+    "description": "Measurement guide"
+  },
+  "bloodPressureMeasurementGuide": "血压测量指南",
+  "@bloodPressureMeasurementGuide": {
+    "description": "Blood pressure measurement guide"
+  },
+  "birthday": "生日",
+  "@birthday": {
+    "description": "Birthday label"
+  },
+  "gender": "性别",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "pleaseEnter": "请输入",
+  "@pleaseEnter": {
+    "description": "Please enter suffix"
+  },
+  "willBeSentToPhone": "将发送到您的手机。",
+  "@willBeSentToPhone": {
+    "description": "Will be sent to phone message"
+  },
+  "am": "上午",
+  "@am": {
+    "description": "AM period"
+  },
+  "pm": "下午",
+  "@pm": {
+    "description": "PM period"
+  },
+  "guestAuthRequiredTitle": "测量完成。",
+  "@guestAuthRequiredTitle": {
+    "description": "Guest authentication required title"
+  },
+  "guestAuthRequiredMessage": "请输入{highlight}以查看结果。",
+  "@guestAuthRequiredMessage": {
+    "description": "Guest authentication required message",
+    "placeholders": {
+      "highlight": {
+        "type": "String"
+      }
+    }
+  },
+  "guestAuthRequiredHighlight": "用户信息",
+  "@guestAuthRequiredHighlight": {
+    "description": "Guest authentication required highlight text"
+  },
+  "bluetoothDeviceManagement": "蓝牙设备管理",
+  "@bluetoothDeviceManagement": {
+    "description": "Bluetooth device management title"
+  },
+  "bluetoothPairingGuide": "蓝牙配对指南",
+  "@bluetoothPairingGuide": {
+    "description": "Bluetooth pairing guide title"
+  },
+  "scanningDevices": "正在搜索设备",
+  "@scanningDevices": {
+    "description": "Scanning devices message"
+  },
+  "deviceFound": "找到设备",
+  "@deviceFound": {
+    "description": "Device found message"
+  },
+  "pairingRequired": "需要配对",
+  "@pairingRequired": {
+    "description": "Pairing required message"
+  },
+  "bluetoothNotEnabled": "蓝牙未启用",
+  "@bluetoothNotEnabled": {
+    "description": "Bluetooth not enabled message"
+  },
+  "permissionRequired": "需要蓝牙权限",
+  "@permissionRequired": {
+    "description": "Bluetooth permission required message"
+  },
+  "connectDevice": "连接",
+  "@connectDevice": {
+    "description": "Connect device button"
+  },
+  "disconnectDevice": "断开连接",
+  "@disconnectDevice": {
+    "description": "Disconnect device button"
+  },
+  "registerDevice": "注册",
+  "@registerDevice": {
+    "description": "Register device button"
+  },
+  "deleteDevice": "删除",
+  "@deleteDevice": {
+    "description": "Delete device button"
+  },
+  "deviceConnectionSuccess": "连接成功",
+  "@deviceConnectionSuccess": {
+    "description": "Device connection success message"
+  },
+  "deviceConnectionFailed": "连接失败",
+  "@deviceConnectionFailed": {
+    "description": "Device connection failed message"
+  },
+  "noDevicesFound": "未找到设备",
+  "@noDevicesFound": {
+    "description": "No devices found message"
+  },
+  "rescan": "重新扫描",
+  "@rescan": {
+    "description": "Rescan button"
+  },
+  "deviceConnectionNotConfirmed": "设备连接未确认",
+  "@deviceConnectionNotConfirmed": {
+    "description": "Device connection not confirmed message"
+  },
+  "deviceConnectionCheckMessage": "请检查设备和端口。",
+  "@deviceConnectionCheckMessage": {
+    "description": "Message to check device and port"
+  },
+  "alcoResultTitle": "酒精测试结果",
+  "@alcoResultTitle": {
+    "description": "Alcohol test result screen title"
+  },
+  "alcoResultLoading": "正在接收结果数据...",
+  "@alcoResultLoading": {
+    "description": "Loading message on alcohol result screen"
+  },
+  "alcoResultHidden": "结果已隐藏。",
+  "@alcoResultHidden": {
+    "description": "Hidden result message on alcohol result screen"
+  },
+  "alcoResultPass": "测量结果正常。",
+  "@alcoResultPass": {
+    "description": "Alcohol result pass message"
+  },
+  "alcoResultPassSub": "（血液酒精浓度低于0.030%时）",
+  "@alcoResultPassSub": {
+    "description": "Alcohol result pass sub text"
+  },
+  "alcoResultFailGuide": "请接受管理员的指导。",
+  "@alcoResultFailGuide": {
+    "description": "Alcohol result fail guide message"
+  },
+  "alcoResultFailSub": "（血液酒精浓度达到0.030%或以上时）",
+  "@alcoResultFailSub": {
+    "description": "Alcohol result fail sub text"
+  },
+  "hwHeightLabel": "身高",
+  "@hwHeightLabel": {
+    "description": "Height label in height/weight result"
+  },
+  "hwWeightLabel": "体重",
+  "@hwWeightLabel": {
+    "description": "Weight label in height/weight result"
+  },
+  "hwBmiLabel": "体质量",
+  "@hwBmiLabel": {
+    "description": "BMI label in height/weight result"
+  }
+}

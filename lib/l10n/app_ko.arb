@@ -1,0 +1,725 @@
+{
+  "@@locale": "ko",
+  "appTitle": "플러터 템플릿",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "headerTitle": "스마트 건강관리",
+  "@headerTitle": {
+    "description": "The title displayed in the header"
+  },
+  "touchScreenMessage": "화면을 터치해주세요!",
+  "@touchScreenMessage": {
+    "description": "Message to prompt user to touch the screen"
+  },
+  "authTitle": "<b>사용자 번호</b> 또는 <b>휴대폰 번호</b>를 입력해주시거나\n<b>사용자 바코드</b> 또는 <b>QR 코드</b>를 리더기에 대주세요.",
+  "@authTitle": {
+    "description": "Authentication screen title"
+  },
+  "authInputHint": "사용자번호 또는 휴대폰 번호 입력",
+  "@authInputHint": {
+    "description": "Authentication input field hint"
+  },
+  "authClearAll": "전체삭제",
+  "@authClearAll": {
+    "description": "Clear all button text"
+  },
+  "authConfirm": "확인",
+  "@authConfirm": {
+    "description": "Confirm button text"
+  },
+  "loadingDefault": "처리 중입니다...",
+  "@loadingDefault": {
+    "description": "Default loading message"
+  },
+  "systemErrorTitle": "시스템 오류",
+  "@systemErrorTitle": {
+    "description": "System error title"
+  },
+  "systemErrorMessage": "시스템에 오류가 발생했습니다.\n관리자에게 문의해주세요.",
+  "@systemErrorMessage": {
+    "description": "System error message"
+  },
+  "contactAdministrator": "관리자에게 문의해주세요.",
+  "@contactAdministrator": {
+    "description": "Contact administrator message"
+  },
+  "confirm": "확인",
+  "@confirm": {
+    "description": "Confirm button"
+  },
+  "progressTitle": "진행중입니다.",
+  "@progressTitle": {
+    "description": "Progress title"
+  },
+  "progressMessage": "잠시만 기다려주세요.",
+  "@progressMessage": {
+    "description": "Progress message"
+  },
+  "invalidPhoneFormatTitle": "입력 오류",
+  "@invalidPhoneFormatTitle": {
+    "description": "Invalid phone number format title"
+  },
+  "invalidPhoneFormat": "전화번호 형식이 알맞지 않습니다.\n11자리 숫자를 입력해주세요.",
+  "@invalidPhoneFormat": {
+    "description": "Invalid phone number format message"
+  },
+  "noMemberFound": "일치하는 회원 정보가 없습니다.",
+  "@noMemberFound": {
+    "description": "No member information found"
+  },
+  "registerQuestion": "이 번호로 {highlight} 하시겠습니까?",
+  "@registerQuestion": {
+    "description": "Registration confirmation question",
+    "placeholders": {
+      "highlight": {
+        "type": "String"
+      }
+    }
+  },
+  "registerHighlight": "회원가입",
+  "@registerHighlight": {
+    "description": "Registration highlight text"
+  },
+  "registerPrefix": "이 번호로",
+  "@registerPrefix": {
+    "description": "Registration question prefix"
+  },
+  "registerSuffix": "하시겠습니까?",
+  "@registerSuffix": {
+    "description": "Registration question suffix"
+  },
+  "measurementHighlight": "측정",
+  "@measurementHighlight": {
+    "description": "Measurement highlight text"
+  },
+  "measurementQuestion": "측정 하시겠습니까?",
+  "@measurementQuestion": {
+    "description": "Measurement confirmation question"
+  },
+  "phoneCheckMessage": "휴대폰 번호를 확인해주세요.",
+  "@phoneCheckMessage": {
+    "description": "Phone number check message"
+  },
+  "no": "아니요",
+  "@no": {
+    "description": "No button text"
+  },
+  "yes": "예",
+  "@yes": {
+    "description": "Yes button text"
+  },
+  "registrationCompleteTitle": "회원가입 링크가 전송되었습니다.",
+  "@registrationCompleteTitle": {
+    "description": "Registration complete title"
+  },
+  "registrationCompleteMessage": "휴대폰에서 <c>회원가입</c> 후\n측정을 진행 해주세요.",
+  "@registrationCompleteMessage": {
+    "description": "Registration complete message"
+  },
+  "userConfirmQuestion": "본인이 맞으십니까?",
+  "@userConfirmQuestion": {
+    "description": "User confirmation question"
+  },
+  "userConfirmYes": "네, 맞습니다",
+  "@userConfirmYes": {
+    "description": "Yes, that's correct button"
+  },
+  "userConfirmNo": "아닙니다",
+  "@userConfirmNo": {
+    "description": "No button"
+  },
+  "adminPasswordTitle": "관리자 비밀번호",
+  "@adminPasswordTitle": {
+    "description": "Admin password dialog title"
+  },
+  "adminPasswordErrorTitle": "오류",
+  "@adminPasswordErrorTitle": {
+    "description": "Admin password error title"
+  },
+  "adminPasswordErrorMessage": "관리자 비밀번호가 잘못되었습니다.",
+  "@adminPasswordErrorMessage": {
+    "description": "Admin password error message"
+  },
+  "adminSettingsTitle": "관리자 환경설정",
+  "@adminSettingsTitle": {
+    "description": "Admin settings screen title"
+  },
+  "adminPasswordChangeTitle": "관리자 비밀번호 변경",
+  "@adminPasswordChangeTitle": {
+    "description": "Admin password change title"
+  },
+  "adminCurrentPasswordLabel": "현재 비밀번호",
+  "@adminCurrentPasswordLabel": {
+    "description": "Current password label"
+  },
+  "adminNewPasswordLabel": "새 비밀번호",
+  "@adminNewPasswordLabel": {
+    "description": "New password label"
+  },
+  "adminConfirmPasswordLabel": "새 비밀번호 확인",
+  "@adminConfirmPasswordLabel": {
+    "description": "Confirm new password label"
+  },
+  "adminPasswordChangeButton": "비밀번호 변경",
+  "@adminPasswordChangeButton": {
+    "description": "Change password button"
+  },
+  "adminPasswordChanging": "변경 중...",
+  "@adminPasswordChanging": {
+    "description": "Changing password status"
+  },
+  "adminPasswordAllFieldsRequired": "모든 비밀번호를 4자리로 입력해주세요.",
+  "@adminPasswordAllFieldsRequired": {
+    "description": "All password fields must be 4 digits"
+  },
+  "adminPasswordMismatch": "새 비밀번호가 일치하지 않습니다.",
+  "@adminPasswordMismatch": {
+    "description": "New passwords do not match"
+  },
+  "adminPasswordCurrentIncorrect": "현재 비밀번호가 일치하지 않습니다.",
+  "@adminPasswordCurrentIncorrect": {
+    "description": "Current password is incorrect"
+  },
+  "adminPasswordChangeSuccess": "비밀번호가 변경되었습니다.",
+  "@adminPasswordChangeSuccess": {
+    "description": "Password changed successfully"
+  },
+  "adminPasswordChangeError": "비밀번호 변경 중 오류가 발생했습니다.",
+  "@adminPasswordChangeError": {
+    "description": "Error occurred while changing password"
+  },
+  "cancel": "취소",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "adminLanguageSelectionTitle": "언어 설정",
+  "@adminLanguageSelectionTitle": {
+    "description": "Language selection title"
+  },
+  "languageKorean": "한국어",
+  "@languageKorean": {
+    "description": "Korean language"
+  },
+  "languageEnglish": "English",
+  "@languageEnglish": {
+    "description": "English language"
+  },
+  "deviceTypeBP": "혈압",
+  "@deviceTypeBP": {
+    "description": "Blood Pressure device type"
+  },
+  "deviceTypeHS": "신장체중",
+  "@deviceTypeHS": {
+    "description": "Height Scale device type"
+  },
+  "deviceTypeVA": "시력",
+  "@deviceTypeVA": {
+    "description": "Visual Acuity device type"
+  },
+  "deviceTypeCM": "색각",
+  "@deviceTypeCM": {
+    "description": "Colorimetric device type"
+  },
+  "deviceTypeBC": "체성분",
+  "@deviceTypeBC": {
+    "description": "Body Composition device type"
+  },
+  "deviceTypeBS": "혈당",
+  "@deviceTypeBS": {
+    "description": "Blood Sugar device type"
+  },
+  "deviceTypeHRV": "자율신경계(비접촉)",
+  "@deviceTypeHRV": {
+    "description": "Heart Rate Variability device type"
+  },
+  "deviceTypeST": "자율신경계(접촉)",
+  "@deviceTypeST": {
+    "description": "Stress Test device type"
+  },
+  "deviceTypeAL": "음주",
+  "@deviceTypeAL": {
+    "description": "Alcohol device type"
+  },
+  "deviceTypeHC": "신장체중계",
+  "@deviceTypeHC": {
+    "description": "Height and weight scale device type"
+  },
+  "deviceTypeMF": "메디폼",
+  "@deviceTypeMF": {
+    "description": "Mediform device type"
+  },
+  "deviceTypeLU": "폐활량",
+  "@deviceTypeLU": {
+    "description": "Lung capacity device type"
+  },
+  "deviceTypeOM": "기타",
+  "@deviceTypeOM": {
+    "description": "Other measuring device type"
+  },
+  "deviceSelectionTitle": "측정 가능 기기",
+  "@deviceSelectionTitle": {
+    "description": "Device selection screen title"
+  },
+  "noDevicesAvailable": "사용 가능한 측정 기기가 없습니다",
+  "@noDevicesAvailable": {
+    "description": "No devices available message"
+  },
+  "bloodPressureSample": "혈압 샘플",
+  "@bloodPressureSample": {
+    "description": "Blood pressure sample button"
+  },
+  "bloodPressureResultTitle": "혈압측정 결과",
+  "@bloodPressureResultTitle": {
+    "description": "Blood pressure result screen title"
+  },
+  "systolicPressure": "수축기 혈압",
+  "@systolicPressure": {
+    "description": "Systolic blood pressure"
+  },
+  "diastolicPressure": "이완기 혈압",
+  "@diastolicPressure": {
+    "description": "Diastolic blood pressure"
+  },
+  "pulse": "맥박",
+  "@pulse": {
+    "description": "Pulse"
+  },
+  "mmHg": "mmHg",
+  "@mmHg": {
+    "description": "Unit for blood pressure"
+  },
+  "bpm": "bpm",
+  "@bpm": {
+    "description": "Unit for pulse (beats per minute)"
+  },
+  "resultHidden": "결과 숨김",
+  "@resultHidden": {
+    "description": "Hide result button"
+  },
+  "resultHiddenMessage": "결과가 숨겨져 있습니다",
+  "@resultHiddenMessage": {
+    "description": "Message when result is hidden"
+  },
+  "videoArea": "영상 영역",
+  "@videoArea": {
+    "description": "Video area placeholder"
+  },
+  "remeasure": "재측정",
+  "@remeasure": {
+    "description": "Remeasure button"
+  },
+  "sendMessage": "문자전송",
+  "@sendMessage": {
+    "description": "Send message button"
+  },
+  "sendMessagePending": "문자 전송 기능은 준비 중입니다.",
+  "@sendMessagePending": {
+    "description": "Message sending feature under preparation"
+  },
+  "bpStatusNormal": "정상",
+  "@bpStatusNormal": {
+    "description": "Normal blood pressure status"
+  },
+  "bpStatusCaution": "주의혈압",
+  "@bpStatusCaution": {
+    "description": "Caution blood pressure status"
+  },
+  "bpStatusPreHypertension": "전고혈압",
+  "@bpStatusPreHypertension": {
+    "description": "Prehypertension status"
+  },
+  "bpStatusHypertension1": "고혈압1기",
+  "@bpStatusHypertension1": {
+    "description": "Hypertension stage 1 status"
+  },
+  "bpStatusHypertension2": "고혈압2기",
+  "@bpStatusHypertension2": {
+    "description": "Hypertension stage 2 status"
+  },
+  "bpStatusHypertension3": "고혈압 3단계",
+  "@bpStatusHypertension3": {
+    "description": "Hypertension stage 3 status"
+  },
+  "heightWeightResultTitle": "신장체중측정 결과",
+  "@heightWeightResultTitle": {
+    "description": "Height and weight measurement result title"
+  },
+  "bmiStatusUnderweight": "저체중",
+  "@bmiStatusUnderweight": {
+    "description": "BMI status underweight"
+  },
+  "bmiStatusNormal": "정상",
+  "@bmiStatusNormal": {
+    "description": "BMI status normal"
+  },
+  "bmiStatusPreObese": "비만전단계",
+  "@bmiStatusPreObese": {
+    "description": "BMI status pre-obese"
+  },
+  "bmiStatusObese1": "1단계 비만",
+  "@bmiStatusObese1": {
+    "description": "BMI status obesity stage 1"
+  },
+  "bmiStatusObese2": "2단계 비만",
+  "@bmiStatusObese2": {
+    "description": "BMI status obesity stage 2"
+  },
+  "bmiStatusObese3": "3단계 비만",
+  "@bmiStatusObese3": {
+    "description": "BMI status obesity stage 3"
+  },
+  "resultShow": "결과 보기",
+  "@resultShow": {
+    "description": "Show result button"
+  },
+  "resultHiddenGuide": "측정 결과를 문자전송으로 받아볼 수 있어요.",
+  "@resultHiddenGuide": {
+    "description": "Guide message when result is hidden"
+  },
+  "sendMessageSuccess": "측정 결과가 전송되었습니다.",
+  "@sendMessageSuccess": {
+    "description": "Message sent successfully"
+  },
+  "sendMessageSuccessHighlight": "측정 결과",
+  "@sendMessageSuccessHighlight": {
+    "description": "Highlighted text for message sent"
+  },
+  "sendMessageSuccessSuffix": "가 전송되었습니다.",
+  "@sendMessageSuccessSuffix": {
+    "description": "Suffix after highlight for message sent success"
+  },
+  "languageSelection": "언어 선택 (Language)",
+  "@languageSelection": {
+    "description": "Language selection dialog title"
+  },
+  "languageButton": "Language",
+  "@languageButton": {
+    "description": "Language button label"
+  },
+  "helpButton": "이용안내",
+  "@helpButton": {
+    "description": "Help button label"
+  },
+  "languageKoreanNative": "한국어",
+  "@languageKoreanNative": {
+    "description": "Korean in Korean"
+  },
+  "languageKoreanEng": "korean",
+  "@languageKoreanEng": {
+    "description": "Korean in English"
+  },
+  "languageEnglishNative": "English",
+  "@languageEnglishNative": {
+    "description": "English in English"
+  },
+  "languageEnglishEng": "English",
+  "@languageEnglishEng": {
+    "description": "English in English"
+  },
+  "guestPhoneInputTitle": "휴대폰 번호를 입력해주세요.\n측정 결과가 휴대폰으로 전송됩니다.",
+  "@guestPhoneInputTitle": {
+    "description": "Guest phone input screen title"
+  },
+  "guestPhoneInputTitleHighlight1": "휴대폰 번호",
+  "@guestPhoneInputTitleHighlight1": {
+    "description": "Highlighted text 1"
+  },
+  "guestPhoneInputTitleHighlight2": "측정 결과",
+  "@guestPhoneInputTitleHighlight2": {
+    "description": "Highlighted text 2"
+  },
+  "agreeAllAndSend": "모두 동의하고 전송",
+  "@agreeAllAndSend": {
+    "description": "Agree all and send button"
+  },
+  "termsAgreement": "*이용약관 동의",
+  "@termsAgreement": {
+    "description": "Terms agreement section title"
+  },
+  "privacyPolicy": "개인정보 이용 동의 (필수)",
+  "@privacyPolicy": {
+    "description": "Privacy policy"
+  },
+  "termsOfService": "서비스이용약관동의(필수)",
+  "@termsOfService": {
+    "description": "Terms of service"
+  },
+  "thirdPartyInfo": "제3자정보제공동의(필수)",
+  "@thirdPartyInfo": {
+    "description": "Third party information"
+  },
+  "sensitiveInfo": "민감정보 이용 동의(필수)",
+  "@sensitiveInfo": {
+    "description": "Sensitive information"
+  },
+  "viewDetails": "보기",
+  "@viewDetails": {
+    "description": "View details button"
+  },
+  "agreementContentUnavailable": "약관 내용을 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.",
+  "@agreementContentUnavailable": {
+    "description": "Shown when agreement image URL is missing or failed to load"
+  },
+  "bloodPressure": "혈압",
+  "@bloodPressure": {
+    "description": "Blood pressure"
+  },
+  "systolicBloodPressure": "수축기 혈압",
+  "@systolicBloodPressure": {
+    "description": "Systolic blood pressure"
+  },
+  "diastolicBloodPressure": "이완기 혈압",
+  "@diastolicBloodPressure": {
+    "description": "Diastolic blood pressure"
+  },
+  "measurementResult": "측정 결과",
+  "@measurementResult": {
+    "description": "Measurement result"
+  },
+  "requestAuth": "인증요청",
+  "@requestAuth": {
+    "description": "Request authentication button"
+  },
+  "verificationCode": "인증번호",
+  "@verificationCode": {
+    "description": "Verification code"
+  },
+  "enterVerificationCode": "인증번호를 입력해주세요.",
+  "@enterVerificationCode": {
+    "description": "Enter verification code hint"
+  },
+  "enterPhoneNumberCorrectly": "휴대폰 번호를 올바르게 입력해주세요.",
+  "@enterPhoneNumberCorrectly": {
+    "description": "Enter phone number correctly message"
+  },
+  "enterBirthday": "생년월일을 입력해주세요.",
+  "@enterBirthday": {
+    "description": "Enter birthday message"
+  },
+  "enterVerificationCode6Digits": "인증번호 6자리를 입력해주세요.",
+  "@enterVerificationCode6Digits": {
+    "description": "Enter 6-digit verification code message"
+  },
+  "enterVerificationCode4Digits": "인증번호 4자리를 입력해주세요.",
+  "@enterVerificationCode4Digits": {
+    "description": "Enter 4-digit verification code message"
+  },
+  "requestVerificationCodeFirst": "인증번호를 먼저 요청해주세요.",
+  "@requestVerificationCodeFirst": {
+    "description": "Request verification code first message"
+  },
+  "verificationFailed": "인증 실패",
+  "@verificationFailed": {
+    "description": "Verification failed title"
+  },
+  "verificationCodeMismatch": "인증번호가 일치하지 않습니다.",
+  "@verificationCodeMismatch": {
+    "description": "Verification code mismatch message"
+  },
+  "authRequired": "인증 필요",
+  "@authRequired": {
+    "description": "Authentication required title"
+  },
+  "requestAuthFirst": "인증요청을 먼저 진행해주세요.",
+  "@requestAuthFirst": {
+    "description": "Request authentication first message"
+  },
+  "error": "오류",
+  "@error": {
+    "description": "Error title"
+  },
+  "authInfoNotFound": "인증 정보를 찾을 수 없습니다.",
+  "@authInfoNotFound": {
+    "description": "Authentication info not found message"
+  },
+  "measurementInfoNotFound": "측정 정보를 찾을 수 없습니다.",
+  "@measurementInfoNotFound": {
+    "description": "Measurement info not found message"
+  },
+  "enterCorrectPhoneNumber": "올바른 휴대폰 번호를 입력해주세요.",
+  "@enterCorrectPhoneNumber": {
+    "description": "Enter correct phone number message"
+  },
+  "enterCorrectBirthday": "올바른 생년월일을 입력해주세요.",
+  "@enterCorrectBirthday": {
+    "description": "Enter correct birthday message"
+  },
+  "measurementResultNotFound": "측정 결과를 찾을 수 없습니다.",
+  "@measurementResultNotFound": {
+    "description": "Measurement result not found message"
+  },
+  "defaultKioskPlace": "메디터치 키오스크",
+  "@defaultKioskPlace": {
+    "description": "Default kiosk place name"
+  },
+  "male": "남성",
+  "@male": {
+    "description": "Male gender"
+  },
+  "female": "여성",
+  "@female": {
+    "description": "Female gender"
+  },
+  "homeScreen": "처음 화면",
+  "@homeScreen": {
+    "description": "Home screen button"
+  },
+  "measurementGuide": "측정 안내",
+  "@measurementGuide": {
+    "description": "Measurement guide"
+  },
+  "bloodPressureMeasurementGuide": "혈압 측정 안내",
+  "@bloodPressureMeasurementGuide": {
+    "description": "Blood pressure measurement guide"
+  },
+  "birthday": "생년월일",
+  "@birthday": {
+    "description": "Birthday label"
+  },
+  "gender": "성별",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "pleaseEnter": "를 입력해주세요.",
+  "@pleaseEnter": {
+    "description": "Please enter suffix"
+  },
+  "willBeSentToPhone": "가 휴대폰으로 전송됩니다.",
+  "@willBeSentToPhone": {
+    "description": "Will be sent to phone message"
+  },
+  "am": "오전",
+  "@am": {
+    "description": "AM period"
+  },
+  "pm": "오후",
+  "@pm": {
+    "description": "PM period"
+  },
+  "guestAuthRequiredTitle": "측정이 완료되었습니다.",
+  "@guestAuthRequiredTitle": {
+    "description": "Guest authentication required title"
+  },
+  "guestAuthRequiredMessage": "결과 확인을 위해 {highlight}를 입력해주세요.",
+  "@guestAuthRequiredMessage": {
+    "description": "Guest authentication required message",
+    "placeholders": {
+      "highlight": {
+        "type": "String"
+      }
+    }
+  },
+  "guestAuthRequiredHighlight": "사용자 정보",
+  "@guestAuthRequiredHighlight": {
+    "description": "Guest authentication required highlight text"
+  },
+  "bluetoothDeviceManagement": "블루투스 기기 관리",
+  "@bluetoothDeviceManagement": {
+    "description": "Bluetooth device management title"
+  },
+  "bluetoothPairingGuide": "블루투스 페어링 안내",
+  "@bluetoothPairingGuide": {
+    "description": "Bluetooth pairing guide title"
+  },
+  "scanningDevices": "기기를 찾고 있습니다",
+  "@scanningDevices": {
+    "description": "Scanning devices message"
+  },
+  "deviceFound": "기기 발견",
+  "@deviceFound": {
+    "description": "Device found message"
+  },
+  "pairingRequired": "페어링이 필요합니다",
+  "@pairingRequired": {
+    "description": "Pairing required message"
+  },
+  "bluetoothNotEnabled": "블루투스가 활성화되지 않았습니다",
+  "@bluetoothNotEnabled": {
+    "description": "Bluetooth not enabled message"
+  },
+  "permissionRequired": "블루투스 권한이 필요합니다",
+  "@permissionRequired": {
+    "description": "Bluetooth permission required message"
+  },
+  "connectDevice": "연결하기",
+  "@connectDevice": {
+    "description": "Connect device button"
+  },
+  "disconnectDevice": "연결 해제",
+  "@disconnectDevice": {
+    "description": "Disconnect device button"
+  },
+  "registerDevice": "등록",
+  "@registerDevice": {
+    "description": "Register device button"
+  },
+  "deleteDevice": "삭제",
+  "@deleteDevice": {
+    "description": "Delete device button"
+  },
+  "deviceConnectionSuccess": "연결 완료",
+  "@deviceConnectionSuccess": {
+    "description": "Device connection success message"
+  },
+  "deviceConnectionFailed": "연결 실패",
+  "@deviceConnectionFailed": {
+    "description": "Device connection failed message"
+  },
+  "noDevicesFound": "발견된 기기가 없습니다",
+  "@noDevicesFound": {
+    "description": "No devices found message"
+  },
+  "rescan": "다시 검색",
+  "@rescan": {
+    "description": "Rescan button"
+  },
+  "deviceConnectionNotConfirmed": "측정 장비 연결이 확인되지 않았습니다",
+  "@deviceConnectionNotConfirmed": {
+    "description": "Device connection not confirmed message"
+  },
+  "deviceConnectionCheckMessage": "장치 및 포트를 확인해주세요.",
+  "@deviceConnectionCheckMessage": {
+    "description": "Message to check device and port"
+  },
+  "alcoResultTitle": "음주측정 결과",
+  "@alcoResultTitle": {
+    "description": "Alcohol test result screen title"
+  },
+  "alcoResultLoading": "결과 데이터를 수신 중입니다...",
+  "@alcoResultLoading": {
+    "description": "Loading message on alcohol result screen"
+  },
+  "alcoResultHidden": "결과가 숨겨져 있습니다.",
+  "@alcoResultHidden": {
+    "description": "Hidden result message on alcohol result screen"
+  },
+  "alcoResultPass": "측정 결과 정상입니다.",
+  "@alcoResultPass": {
+    "description": "Alcohol result pass message"
+  },
+  "alcoResultPassSub": "(혈중알코올 농도 0.030%미만일 경우)",
+  "@alcoResultPassSub": {
+    "description": "Alcohol result pass sub text"
+  },
+  "alcoResultFailGuide": "관리자의 안내를 받아주세요.",
+  "@alcoResultFailGuide": {
+    "description": "Alcohol result fail guide message"
+  },
+  "alcoResultFailSub": "(혈중알코올 농도 0.030%이상일 경우)",
+  "@alcoResultFailSub": {
+    "description": "Alcohol result fail sub text"
+  },
+  "hwHeightLabel": "신장",
+  "@hwHeightLabel": {
+    "description": "Height label in height/weight result"
+  },
+  "hwWeightLabel": "체중",
+  "@hwWeightLabel": {
+    "description": "Weight label in height/weight result"
+  },
+  "hwBmiLabel": "체질량",
+  "@hwBmiLabel": {
+    "description": "BMI label in height/weight result"
+  }
+}

@@ -1,0 +1,725 @@
+{
+  "@@locale": "en",
+  "appTitle": "Flutter Template",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "headerTitle": "Smart Health Care",
+  "@headerTitle": {
+    "description": "The title displayed in the header"
+  },
+  "touchScreenMessage": "Please touch the screen!",
+  "@touchScreenMessage": {
+    "description": "Message to prompt user to touch the screen"
+  },
+  "authTitle": "Please enter your <b>user number</b> or <b>mobile phone number</b>\nor scan your <b>user barcode</b> or <b>QR code</b>.",
+  "@authTitle": {
+    "description": "Authentication screen title"
+  },
+  "authInputHint": "Enter user number or phone number",
+  "@authInputHint": {
+    "description": "Authentication input field hint"
+  },
+  "authClearAll": "Clear All",
+  "@authClearAll": {
+    "description": "Clear all button text"
+  },
+  "authConfirm": "Confirm",
+  "@authConfirm": {
+    "description": "Confirm button text"
+  },
+  "loadingDefault": "Processing...",
+  "@loadingDefault": {
+    "description": "Default loading message"
+  },
+  "systemErrorTitle": "System Error",
+  "@systemErrorTitle": {
+    "description": "System error title"
+  },
+  "systemErrorMessage": "A system error has occurred.\nPlease contact the administrator.",
+  "@systemErrorMessage": {
+    "description": "System error message"
+  },
+  "contactAdministrator": "Please contact the administrator.",
+  "@contactAdministrator": {
+    "description": "Contact administrator message"
+  },
+  "confirm": "Confirm",
+  "@confirm": {
+    "description": "Confirm button"
+  },
+  "progressTitle": "In Progress.",
+  "@progressTitle": {
+    "description": "Progress title"
+  },
+  "progressMessage": "Please wait a moment.",
+  "@progressMessage": {
+    "description": "Progress message"
+  },
+  "invalidPhoneFormatTitle": "Input Error",
+  "@invalidPhoneFormatTitle": {
+    "description": "Invalid phone number format title"
+  },
+  "invalidPhoneFormat": "Invalid phone number format.\nPlease enter 11 digits.",
+  "@invalidPhoneFormat": {
+    "description": "Invalid phone number format message"
+  },
+  "noMemberFound": "No matching member information found.",
+  "@noMemberFound": {
+    "description": "No member information found"
+  },
+  "registerQuestion": "Would you like to {highlight} with this number?",
+  "@registerQuestion": {
+    "description": "Registration confirmation question",
+    "placeholders": {
+      "highlight": {
+        "type": "String"
+      }
+    }
+  },
+  "registerHighlight": "register",
+  "@registerHighlight": {
+    "description": "Registration highlight text"
+  },
+  "registerPrefix": "Would you like to",
+  "@registerPrefix": {
+    "description": "Registration question prefix"
+  },
+  "registerSuffix": "with this number?",
+  "@registerSuffix": {
+    "description": "Registration question suffix"
+  },
+  "measurementHighlight": "measure",
+  "@measurementHighlight": {
+    "description": "Measurement highlight text"
+  },
+  "measurementQuestion": "Would you like to measure?",
+  "@measurementQuestion": {
+    "description": "Measurement confirmation question"
+  },
+  "phoneCheckMessage": "Please check your phone number.",
+  "@phoneCheckMessage": {
+    "description": "Phone number check message"
+  },
+  "no": "No",
+  "@no": {
+    "description": "No button text"
+  },
+  "yes": "Yes",
+  "@yes": {
+    "description": "Yes button text"
+  },
+  "registrationCompleteTitle": "Registration link has been sent.",
+  "@registrationCompleteTitle": {
+    "description": "Registration complete title"
+  },
+  "registrationCompleteMessage": "Please <c>register</c> on your mobile phone\nand proceed with the measurement.",
+  "@registrationCompleteMessage": {
+    "description": "Registration complete message"
+  },
+  "userConfirmQuestion": "Is this you?",
+  "@userConfirmQuestion": {
+    "description": "User confirmation question"
+  },
+  "userConfirmYes": "Yes, that's correct",
+  "@userConfirmYes": {
+    "description": "Yes, that's correct button"
+  },
+  "userConfirmNo": "No",
+  "@userConfirmNo": {
+    "description": "No button"
+  },
+  "adminPasswordTitle": "Admin Password",
+  "@adminPasswordTitle": {
+    "description": "Admin password dialog title"
+  },
+  "adminPasswordErrorTitle": "Error",
+  "@adminPasswordErrorTitle": {
+    "description": "Admin password error title"
+  },
+  "adminPasswordErrorMessage": "The admin password is incorrect.",
+  "@adminPasswordErrorMessage": {
+    "description": "Admin password error message"
+  },
+  "adminSettingsTitle": "Admin Settings",
+  "@adminSettingsTitle": {
+    "description": "Admin settings screen title"
+  },
+  "adminPasswordChangeTitle": "Change Admin Password",
+  "@adminPasswordChangeTitle": {
+    "description": "Admin password change title"
+  },
+  "adminCurrentPasswordLabel": "Current Password",
+  "@adminCurrentPasswordLabel": {
+    "description": "Current password label"
+  },
+  "adminNewPasswordLabel": "New Password",
+  "@adminNewPasswordLabel": {
+    "description": "New password label"
+  },
+  "adminConfirmPasswordLabel": "Confirm New Password",
+  "@adminConfirmPasswordLabel": {
+    "description": "Confirm new password label"
+  },
+  "adminPasswordChangeButton": "Change Password",
+  "@adminPasswordChangeButton": {
+    "description": "Change password button"
+  },
+  "adminPasswordChanging": "Changing...",
+  "@adminPasswordChanging": {
+    "description": "Changing password status"
+  },
+  "adminPasswordAllFieldsRequired": "Please enter all passwords as 4 digits.",
+  "@adminPasswordAllFieldsRequired": {
+    "description": "All password fields must be 4 digits"
+  },
+  "adminPasswordMismatch": "New passwords do not match.",
+  "@adminPasswordMismatch": {
+    "description": "New passwords do not match"
+  },
+  "adminPasswordCurrentIncorrect": "Current password is incorrect.",
+  "@adminPasswordCurrentIncorrect": {
+    "description": "Current password is incorrect"
+  },
+  "adminPasswordChangeSuccess": "Password has been changed.",
+  "@adminPasswordChangeSuccess": {
+    "description": "Password changed successfully"
+  },
+  "adminPasswordChangeError": "An error occurred while changing the password.",
+  "@adminPasswordChangeError": {
+    "description": "Error occurred while changing password"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "adminLanguageSelectionTitle": "Language Settings",
+  "@adminLanguageSelectionTitle": {
+    "description": "Language selection title"
+  },
+  "languageKorean": "한국어",
+  "@languageKorean": {
+    "description": "Korean language"
+  },
+  "languageEnglish": "English",
+  "@languageEnglish": {
+    "description": "English language"
+  },
+  "deviceTypeBP": "Blood Pressure",
+  "@deviceTypeBP": {
+    "description": "Blood Pressure device type"
+  },
+  "deviceTypeHS": "Height & Weight",
+  "@deviceTypeHS": {
+    "description": "Height Scale device type"
+  },
+  "deviceTypeVA": "Visual Acuity",
+  "@deviceTypeVA": {
+    "description": "Visual Acuity device type"
+  },
+  "deviceTypeCM": "Color Vision",
+  "@deviceTypeCM": {
+    "description": "Colorimetric device type"
+  },
+  "deviceTypeBC": "Body Composition",
+  "@deviceTypeBC": {
+    "description": "Body Composition device type"
+  },
+  "deviceTypeBS": "Blood Sugar",
+  "@deviceTypeBS": {
+    "description": "Blood Sugar device type"
+  },
+  "deviceTypeHRV": "ANS (Non-contact)",
+  "@deviceTypeHRV": {
+    "description": "Heart Rate Variability device type"
+  },
+  "deviceTypeST": "ANS (Contact)",
+  "@deviceTypeST": {
+    "description": "Stress Test device type"
+  },
+  "deviceTypeAL": "Alcohol",
+  "@deviceTypeAL": {
+    "description": "Alcohol device type"
+  },
+  "deviceTypeHC": "Height & Weight Scale",
+  "@deviceTypeHC": {
+    "description": "Height and weight scale device type"
+  },
+  "deviceTypeMF": "Mediform",
+  "@deviceTypeMF": {
+    "description": "Mediform device type"
+  },
+  "deviceTypeLU": "Lung Capacity",
+  "@deviceTypeLU": {
+    "description": "Lung capacity device type"
+  },
+  "deviceTypeOM": "Other",
+  "@deviceTypeOM": {
+    "description": "Other measuring device type"
+  },
+  "deviceSelectionTitle": "Available Devices",
+  "@deviceSelectionTitle": {
+    "description": "Device selection screen title"
+  },
+  "noDevicesAvailable": "No devices available",
+  "@noDevicesAvailable": {
+    "description": "No devices available message"
+  },
+  "bloodPressureSample": "BP Sample",
+  "@bloodPressureSample": {
+    "description": "Blood pressure sample button"
+  },
+  "bloodPressureResultTitle": "Blood Pressure Result",
+  "@bloodPressureResultTitle": {
+    "description": "Blood pressure result screen title"
+  },
+  "systolicPressure": "Systolic Pressure",
+  "@systolicPressure": {
+    "description": "Systolic blood pressure"
+  },
+  "diastolicPressure": "Diastolic Pressure",
+  "@diastolicPressure": {
+    "description": "Diastolic blood pressure"
+  },
+  "pulse": "Pulse",
+  "@pulse": {
+    "description": "Pulse"
+  },
+  "mmHg": "mmHg",
+  "@mmHg": {
+    "description": "Unit for blood pressure"
+  },
+  "bpm": "bpm",
+  "@bpm": {
+    "description": "Unit for pulse (beats per minute)"
+  },
+  "resultHidden": "Hide Result",
+  "@resultHidden": {
+    "description": "Hide result button"
+  },
+  "resultHiddenMessage": "Result is hidden",
+  "@resultHiddenMessage": {
+    "description": "Message when result is hidden"
+  },
+  "videoArea": "Video Area",
+  "@videoArea": {
+    "description": "Video area placeholder"
+  },
+  "remeasure": "Remeasure",
+  "@remeasure": {
+    "description": "Remeasure button"
+  },
+  "sendMessage": "Send Message",
+  "@sendMessage": {
+    "description": "Send message button"
+  },
+  "sendMessagePending": "Message sending feature is under preparation.",
+  "@sendMessagePending": {
+    "description": "Message sending feature under preparation"
+  },
+  "bpStatusNormal": "Normal",
+  "@bpStatusNormal": {
+    "description": "Normal blood pressure status"
+  },
+  "bpStatusCaution": "Caution",
+  "@bpStatusCaution": {
+    "description": "Caution blood pressure status"
+  },
+  "bpStatusPreHypertension": "Prehypertension",
+  "@bpStatusPreHypertension": {
+    "description": "Prehypertension status"
+  },
+  "bpStatusHypertension1": "Hypertension Stage 1",
+  "@bpStatusHypertension1": {
+    "description": "Hypertension stage 1 status"
+  },
+  "bpStatusHypertension2": "Hypertension Stage 2",
+  "@bpStatusHypertension2": {
+    "description": "Hypertension stage 2 status"
+  },
+  "bpStatusHypertension3": "Hypertension Stage 3",
+  "@bpStatusHypertension3": {
+    "description": "Hypertension stage 3 status"
+  },
+  "heightWeightResultTitle": "Height & Weight Result",
+  "@heightWeightResultTitle": {
+    "description": "Height and weight measurement result title"
+  },
+  "bmiStatusUnderweight": "Underweight",
+  "@bmiStatusUnderweight": {
+    "description": "BMI status underweight"
+  },
+  "bmiStatusNormal": "Normal",
+  "@bmiStatusNormal": {
+    "description": "BMI status normal"
+  },
+  "bmiStatusPreObese": "Pre-obese",
+  "@bmiStatusPreObese": {
+    "description": "BMI status pre-obese"
+  },
+  "bmiStatusObese1": "Obesity I",
+  "@bmiStatusObese1": {
+    "description": "BMI status obesity stage 1"
+  },
+  "bmiStatusObese2": "Obesity II",
+  "@bmiStatusObese2": {
+    "description": "BMI status obesity stage 2"
+  },
+  "bmiStatusObese3": "Obesity III",
+  "@bmiStatusObese3": {
+    "description": "BMI status obesity stage 3"
+  },
+  "resultShow": "Show Result",
+  "@resultShow": {
+    "description": "Show result button"
+  },
+  "resultHiddenGuide": "You can receive measurement results via text message.",
+  "@resultHiddenGuide": {
+    "description": "Guide message when result is hidden"
+  },
+  "sendMessageSuccess": "Measurement results have been sent.",
+  "@sendMessageSuccess": {
+    "description": "Message sent successfully"
+  },
+  "sendMessageSuccessHighlight": "Measurement results",
+  "@sendMessageSuccessHighlight": {
+    "description": "Highlighted text for message sent"
+  },
+  "sendMessageSuccessSuffix": " have been sent.",
+  "@sendMessageSuccessSuffix": {
+    "description": "Suffix after highlight for message sent success"
+  },
+  "languageSelection": "Language Selection",
+  "@languageSelection": {
+    "description": "Language selection dialog title"
+  },
+  "languageButton": "Language",
+  "@languageButton": {
+    "description": "Language button label"
+  },
+  "helpButton": "Help Guide",
+  "@helpButton": {
+    "description": "Help button label"
+  },
+  "languageKoreanNative": "한국어",
+  "@languageKoreanNative": {
+    "description": "Korean in Korean"
+  },
+  "languageKoreanEng": "korean",
+  "@languageKoreanEng": {
+    "description": "Korean in English"
+  },
+  "languageEnglishNative": "English",
+  "@languageEnglishNative": {
+    "description": "English in English"
+  },
+  "languageEnglishEng": "English",
+  "@languageEnglishEng": {
+    "description": "English in English"
+  },
+  "guestPhoneInputTitle": "Please enter your phone number.\nMeasurement results will be sent to your phone.",
+  "@guestPhoneInputTitle": {
+    "description": "Guest phone input screen title"
+  },
+  "guestPhoneInputTitleHighlight1": "phone number",
+  "@guestPhoneInputTitleHighlight1": {
+    "description": "Highlighted text 1"
+  },
+  "guestPhoneInputTitleHighlight2": "Measurement results",
+  "@guestPhoneInputTitleHighlight2": {
+    "description": "Highlighted text 2"
+  },
+  "agreeAllAndSend": "Agree All and Send",
+  "@agreeAllAndSend": {
+    "description": "Agree all and send button"
+  },
+  "termsAgreement": "*Terms Agreement",
+  "@termsAgreement": {
+    "description": "Terms agreement section title"
+  },
+  "privacyPolicy": "Privacy Policy (Required)",
+  "@privacyPolicy": {
+    "description": "Privacy policy"
+  },
+  "termsOfService": "Terms of Service (Required)",
+  "@termsOfService": {
+    "description": "Terms of service"
+  },
+  "thirdPartyInfo": "Third Party Information (Required)",
+  "@thirdPartyInfo": {
+    "description": "Third party information"
+  },
+  "sensitiveInfo": "Sensitive Information (Required)",
+  "@sensitiveInfo": {
+    "description": "Sensitive information"
+  },
+  "viewDetails": "View",
+  "@viewDetails": {
+    "description": "View details button"
+  },
+  "agreementContentUnavailable": "Could not load the agreement content. Please try again later.",
+  "@agreementContentUnavailable": {
+    "description": "Shown when agreement image URL is missing or failed to load"
+  },
+  "bloodPressure": "Blood Pressure",
+  "@bloodPressure": {
+    "description": "Blood pressure"
+  },
+  "systolicBloodPressure": "Systolic Blood Pressure",
+  "@systolicBloodPressure": {
+    "description": "Systolic blood pressure"
+  },
+  "diastolicBloodPressure": "Diastolic Blood Pressure",
+  "@diastolicBloodPressure": {
+    "description": "Diastolic blood pressure"
+  },
+  "measurementResult": "Measurement Result",
+  "@measurementResult": {
+    "description": "Measurement result"
+  },
+  "requestAuth": "Request Auth",
+  "@requestAuth": {
+    "description": "Request authentication button"
+  },
+  "verificationCode": "Verification Code",
+  "@verificationCode": {
+    "description": "Verification code"
+  },
+  "enterVerificationCode": "Please enter verification code.",
+  "@enterVerificationCode": {
+    "description": "Enter verification code hint"
+  },
+  "enterPhoneNumberCorrectly": "Please enter phone number correctly.",
+  "@enterPhoneNumberCorrectly": {
+    "description": "Enter phone number correctly message"
+  },
+  "enterBirthday": "Please enter birthday.",
+  "@enterBirthday": {
+    "description": "Enter birthday message"
+  },
+  "enterVerificationCode6Digits": "Please enter 6-digit verification code.",
+  "@enterVerificationCode6Digits": {
+    "description": "Enter 6-digit verification code message"
+  },
+  "enterVerificationCode4Digits": "Please enter 4-digit verification code.",
+  "@enterVerificationCode4Digits": {
+    "description": "Enter 4-digit verification code message"
+  },
+  "requestVerificationCodeFirst": "Please request verification code first.",
+  "@requestVerificationCodeFirst": {
+    "description": "Request verification code first message"
+  },
+  "verificationFailed": "Verification Failed",
+  "@verificationFailed": {
+    "description": "Verification failed title"
+  },
+  "verificationCodeMismatch": "Verification code does not match.",
+  "@verificationCodeMismatch": {
+    "description": "Verification code mismatch message"
+  },
+  "authRequired": "Authentication Required",
+  "@authRequired": {
+    "description": "Authentication required title"
+  },
+  "requestAuthFirst": "Please request authentication first.",
+  "@requestAuthFirst": {
+    "description": "Request authentication first message"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "Error title"
+  },
+  "authInfoNotFound": "Authentication information not found.",
+  "@authInfoNotFound": {
+    "description": "Authentication info not found message"
+  },
+  "measurementInfoNotFound": "Measurement information not found.",
+  "@measurementInfoNotFound": {
+    "description": "Measurement info not found message"
+  },
+  "enterCorrectPhoneNumber": "Please enter correct phone number.",
+  "@enterCorrectPhoneNumber": {
+    "description": "Enter correct phone number message"
+  },
+  "enterCorrectBirthday": "Please enter correct birthday.",
+  "@enterCorrectBirthday": {
+    "description": "Enter correct birthday message"
+  },
+  "measurementResultNotFound": "Measurement result not found.",
+  "@measurementResultNotFound": {
+    "description": "Measurement result not found message"
+  },
+  "defaultKioskPlace": "Meditech Kiosk",
+  "@defaultKioskPlace": {
+    "description": "Default kiosk place name"
+  },
+  "male": "Male",
+  "@male": {
+    "description": "Male gender"
+  },
+  "female": "Female",
+  "@female": {
+    "description": "Female gender"
+  },
+  "homeScreen": "Home Screen",
+  "@homeScreen": {
+    "description": "Home screen button"
+  },
+  "measurementGuide": "Measurement Guide",
+  "@measurementGuide": {
+    "description": "Measurement guide"
+  },
+  "bloodPressureMeasurementGuide": "Blood Pressure Measurement Guide",
+  "@bloodPressureMeasurementGuide": {
+    "description": "Blood pressure measurement guide"
+  },
+  "birthday": "Birthday",
+  "@birthday": {
+    "description": "Birthday label"
+  },
+  "gender": "Gender",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "pleaseEnter": "Please enter",
+  "@pleaseEnter": {
+    "description": "Please enter suffix"
+  },
+  "willBeSentToPhone": "will be sent to your phone.",
+  "@willBeSentToPhone": {
+    "description": "Will be sent to phone message"
+  },
+  "am": "AM",
+  "@am": {
+    "description": "AM period"
+  },
+  "pm": "PM",
+  "@pm": {
+    "description": "PM period"
+  },
+  "guestAuthRequiredTitle": "Measurement completed.",
+  "@guestAuthRequiredTitle": {
+    "description": "Guest authentication required title"
+  },
+  "guestAuthRequiredMessage": "Please enter {highlight} to check the results.",
+  "@guestAuthRequiredMessage": {
+    "description": "Guest authentication required message",
+    "placeholders": {
+      "highlight": {
+        "type": "String"
+      }
+    }
+  },
+  "guestAuthRequiredHighlight": "user information",
+  "@guestAuthRequiredHighlight": {
+    "description": "Guest authentication required highlight text"
+  },
+  "bluetoothDeviceManagement": "Bluetooth Device Management",
+  "@bluetoothDeviceManagement": {
+    "description": "Bluetooth device management title"
+  },
+  "bluetoothPairingGuide": "Bluetooth Pairing Guide",
+  "@bluetoothPairingGuide": {
+    "description": "Bluetooth pairing guide title"
+  },
+  "scanningDevices": "Searching for devices",
+  "@scanningDevices": {
+    "description": "Scanning devices message"
+  },
+  "deviceFound": "Device Found",
+  "@deviceFound": {
+    "description": "Device found message"
+  },
+  "pairingRequired": "Pairing required",
+  "@pairingRequired": {
+    "description": "Pairing required message"
+  },
+  "bluetoothNotEnabled": "Bluetooth is not enabled",
+  "@bluetoothNotEnabled": {
+    "description": "Bluetooth not enabled message"
+  },
+  "permissionRequired": "Bluetooth permission required",
+  "@permissionRequired": {
+    "description": "Bluetooth permission required message"
+  },
+  "connectDevice": "Connect",
+  "@connectDevice": {
+    "description": "Connect device button"
+  },
+  "disconnectDevice": "Disconnect",
+  "@disconnectDevice": {
+    "description": "Disconnect device button"
+  },
+  "registerDevice": "Register",
+  "@registerDevice": {
+    "description": "Register device button"
+  },
+  "deleteDevice": "Delete",
+  "@deleteDevice": {
+    "description": "Delete device button"
+  },
+  "deviceConnectionSuccess": "Connection successful",
+  "@deviceConnectionSuccess": {
+    "description": "Device connection success message"
+  },
+  "deviceConnectionFailed": "Connection failed",
+  "@deviceConnectionFailed": {
+    "description": "Device connection failed message"
+  },
+  "noDevicesFound": "No devices found",
+  "@noDevicesFound": {
+    "description": "No devices found message"
+  },
+  "rescan": "Rescan",
+  "@rescan": {
+    "description": "Rescan button"
+  },
+  "deviceConnectionNotConfirmed": "Device connection not confirmed",
+  "@deviceConnectionNotConfirmed": {
+    "description": "Device connection not confirmed message"
+  },
+  "deviceConnectionCheckMessage": "Please check the device and port.",
+  "@deviceConnectionCheckMessage": {
+    "description": "Message to check device and port"
+  },
+  "alcoResultTitle": "Alcohol Test Result",
+  "@alcoResultTitle": {
+    "description": "Alcohol test result screen title"
+  },
+  "alcoResultLoading": "Receiving result data...",
+  "@alcoResultLoading": {
+    "description": "Loading message on alcohol result screen"
+  },
+  "alcoResultHidden": "Result is hidden.",
+  "@alcoResultHidden": {
+    "description": "Hidden result message on alcohol result screen"
+  },
+  "alcoResultPass": "Measurement result is normal.",
+  "@alcoResultPass": {
+    "description": "Alcohol result pass message"
+  },
+  "alcoResultPassSub": "(When blood alcohol level is below 0.030%)",
+  "@alcoResultPassSub": {
+    "description": "Alcohol result pass sub text"
+  },
+  "alcoResultFailGuide": "Please follow the administrator's guidance.",
+  "@alcoResultFailGuide": {
+    "description": "Alcohol result fail guide message"
+  },
+  "alcoResultFailSub": "(When blood alcohol level is 0.030% or above)",
+  "@alcoResultFailSub": {
+    "description": "Alcohol result fail sub text"
+  },
+  "hwHeightLabel": "Height",
+  "@hwHeightLabel": {
+    "description": "Height label in height/weight result"
+  },
+  "hwWeightLabel": "Weight",
+  "@hwWeightLabel": {
+    "description": "Weight label in height/weight result"
+  },
+  "hwBmiLabel": "BMI",
+  "@hwBmiLabel": {
+    "description": "BMI label in height/weight result"
+  }
+}

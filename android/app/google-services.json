@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "890333739458",
+    "project_id": "meditouch-push",
+    "storage_bucket": "meditouch-push.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890333739458:android:aa9cb87f3eee088e3e7e5b",
+        "android_client_info": {
+          "package_name": "com.example.flutter_template"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_rNKjz7iGfSMvroF41rjFWz8Z4VRnyNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

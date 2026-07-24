@@ -1,0 +1,725 @@
+{
+  "@@locale": "vi",
+  "appTitle": "Flutter Template",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "headerTitle": "Chăm sóc sức khỏe thông minh",
+  "@headerTitle": {
+    "description": "The title displayed in the header"
+  },
+  "touchScreenMessage": "Vui lòng chạm vào màn hình!",
+  "@touchScreenMessage": {
+    "description": "Message to prompt user to touch the screen"
+  },
+  "authTitle": "Vui lòng nhập <b>số người dùng</b> hoặc <b>số điện thoại di động</b>\nhoặc quét <b>mã vạch người dùng</b> hoặc <b>mã QR</b> của bạn.",
+  "@authTitle": {
+    "description": "Authentication screen title"
+  },
+  "authInputHint": "Nhập số người dùng hoặc số điện thoại",
+  "@authInputHint": {
+    "description": "Authentication input field hint"
+  },
+  "authClearAll": "Xóa tất cả",
+  "@authClearAll": {
+    "description": "Clear all button text"
+  },
+  "authConfirm": "Xác nhận",
+  "@authConfirm": {
+    "description": "Confirm button text"
+  },
+  "loadingDefault": "Đang xử lý...",
+  "@loadingDefault": {
+    "description": "Default loading message"
+  },
+  "systemErrorTitle": "Lỗi hệ thống",
+  "@systemErrorTitle": {
+    "description": "System error title"
+  },
+  "systemErrorMessage": "Đã xảy ra lỗi hệ thống.\nVui lòng liên hệ với quản trị viên.",
+  "@systemErrorMessage": {
+    "description": "System error message"
+  },
+  "contactAdministrator": "Vui lòng liên hệ với quản trị viên.",
+  "@contactAdministrator": {
+    "description": "Contact administrator message"
+  },
+  "confirm": "Xác nhận",
+  "@confirm": {
+    "description": "Confirm button"
+  },
+  "progressTitle": "Đang tiến hành.",
+  "@progressTitle": {
+    "description": "Progress title"
+  },
+  "progressMessage": "Vui lòng đợi một chút.",
+  "@progressMessage": {
+    "description": "Progress message"
+  },
+  "invalidPhoneFormatTitle": "Lỗi nhập liệu",
+  "@invalidPhoneFormatTitle": {
+    "description": "Invalid phone number format title"
+  },
+  "invalidPhoneFormat": "Định dạng số điện thoại không đúng.\nVui lòng nhập 11 chữ số.",
+  "@invalidPhoneFormat": {
+    "description": "Invalid phone number format message"
+  },
+  "noMemberFound": "Không tìm thấy thông tin thành viên phù hợp.",
+  "@noMemberFound": {
+    "description": "No member information found"
+  },
+  "registerQuestion": "Bạn có muốn {highlight} với số này không?",
+  "@registerQuestion": {
+    "description": "Registration confirmation question",
+    "placeholders": {
+      "highlight": {
+        "type": "String"
+      }
+    }
+  },
+  "registerHighlight": "đăng ký",
+  "@registerHighlight": {
+    "description": "Registration highlight text"
+  },
+  "registerPrefix": "Bạn có muốn",
+  "@registerPrefix": {
+    "description": "Registration question prefix"
+  },
+  "registerSuffix": "với số này không?",
+  "@registerSuffix": {
+    "description": "Registration question suffix"
+  },
+  "measurementHighlight": "đo",
+  "@measurementHighlight": {
+    "description": "Measurement highlight text"
+  },
+  "measurementQuestion": "Bạn có muốn đo không?",
+  "@measurementQuestion": {
+    "description": "Measurement confirmation question"
+  },
+  "phoneCheckMessage": "Vui lòng kiểm tra số điện thoại của bạn.",
+  "@phoneCheckMessage": {
+    "description": "Phone number check message"
+  },
+  "no": "Không",
+  "@no": {
+    "description": "No button text"
+  },
+  "yes": "Có",
+  "@yes": {
+    "description": "Yes button text"
+  },
+  "registrationCompleteTitle": "Liên kết đăng ký đã được gửi.",
+  "@registrationCompleteTitle": {
+    "description": "Registration complete title"
+  },
+  "registrationCompleteMessage": "Vui lòng <c>đăng ký</c> trên điện thoại di động của bạn\nvà tiến hành đo.",
+  "@registrationCompleteMessage": {
+    "description": "Registration complete message"
+  },
+  "userConfirmQuestion": "Đây có phải là bạn không?",
+  "@userConfirmQuestion": {
+    "description": "User confirmation question"
+  },
+  "userConfirmYes": "Vâng, đúng vậy",
+  "@userConfirmYes": {
+    "description": "Yes, that's correct button"
+  },
+  "userConfirmNo": "Không phải",
+  "@userConfirmNo": {
+    "description": "No button"
+  },
+  "adminPasswordTitle": "Mật khẩu quản trị viên",
+  "@adminPasswordTitle": {
+    "description": "Admin password dialog title"
+  },
+  "adminPasswordErrorTitle": "Lỗi",
+  "@adminPasswordErrorTitle": {
+    "description": "Admin password error title"
+  },
+  "adminPasswordErrorMessage": "Mật khẩu quản trị viên không đúng.",
+  "@adminPasswordErrorMessage": {
+    "description": "Admin password error message"
+  },
+  "adminSettingsTitle": "Cài đặt quản trị viên",
+  "@adminSettingsTitle": {
+    "description": "Admin settings screen title"
+  },
+  "adminPasswordChangeTitle": "Thay đổi mật khẩu quản trị viên",
+  "@adminPasswordChangeTitle": {
+    "description": "Admin password change title"
+  },
+  "adminCurrentPasswordLabel": "Mật khẩu hiện tại",
+  "@adminCurrentPasswordLabel": {
+    "description": "Current password label"
+  },
+  "adminNewPasswordLabel": "Mật khẩu mới",
+  "@adminNewPasswordLabel": {
+    "description": "New password label"
+  },
+  "adminConfirmPasswordLabel": "Xác nhận mật khẩu mới",
+  "@adminConfirmPasswordLabel": {
+    "description": "Confirm new password label"
+  },
+  "adminPasswordChangeButton": "Thay đổi mật khẩu",
+  "@adminPasswordChangeButton": {
+    "description": "Change password button"
+  },
+  "adminPasswordChanging": "Đang thay đổi...",
+  "@adminPasswordChanging": {
+    "description": "Changing password status"
+  },
+  "adminPasswordAllFieldsRequired": "Vui lòng nhập tất cả mật khẩu là 4 chữ số.",
+  "@adminPasswordAllFieldsRequired": {
+    "description": "All password fields must be 4 digits"
+  },
+  "adminPasswordMismatch": "Mật khẩu mới không khớp.",
+  "@adminPasswordMismatch": {
+    "description": "New passwords do not match"
+  },
+  "adminPasswordCurrentIncorrect": "Mật khẩu hiện tại không đúng.",
+  "@adminPasswordCurrentIncorrect": {
+    "description": "Current password is incorrect"
+  },
+  "adminPasswordChangeSuccess": "Mật khẩu đã được thay đổi.",
+  "@adminPasswordChangeSuccess": {
+    "description": "Password changed successfully"
+  },
+  "adminPasswordChangeError": "Đã xảy ra lỗi khi thay đổi mật khẩu.",
+  "@adminPasswordChangeError": {
+    "description": "Error occurred while changing password"
+  },
+  "cancel": "Hủy",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "adminLanguageSelectionTitle": "Cài đặt ngôn ngữ",
+  "@adminLanguageSelectionTitle": {
+    "description": "Language selection title"
+  },
+  "languageKorean": "한국어",
+  "@languageKorean": {
+    "description": "Korean language"
+  },
+  "languageEnglish": "English",
+  "@languageEnglish": {
+    "description": "English language"
+  },
+  "deviceTypeBP": "Huyết áp",
+  "@deviceTypeBP": {
+    "description": "Blood Pressure device type"
+  },
+  "deviceTypeHS": "Chiều cao & Cân nặng",
+  "@deviceTypeHS": {
+    "description": "Height Scale device type"
+  },
+  "deviceTypeVA": "Thị lực",
+  "@deviceTypeVA": {
+    "description": "Visual Acuity device type"
+  },
+  "deviceTypeCM": "Thị giác màu",
+  "@deviceTypeCM": {
+    "description": "Colorimetric device type"
+  },
+  "deviceTypeBC": "Thành phần cơ thể",
+  "@deviceTypeBC": {
+    "description": "Body Composition device type"
+  },
+  "deviceTypeBS": "Đường huyết",
+  "@deviceTypeBS": {
+    "description": "Blood Sugar device type"
+  },
+  "deviceTypeHRV": "Hệ thần kinh tự chủ (Không tiếp xúc)",
+  "@deviceTypeHRV": {
+    "description": "Heart Rate Variability device type"
+  },
+  "deviceTypeST": "Hệ thần kinh tự chủ (Tiếp xúc)",
+  "@deviceTypeST": {
+    "description": "Stress Test device type"
+  },
+  "deviceTypeAL": "Rượu",
+  "@deviceTypeAL": {
+    "description": "Alcohol device type"
+  },
+  "deviceTypeHC": "Cân đo chiều cao",
+  "@deviceTypeHC": {
+    "description": "Height and weight scale device type"
+  },
+  "deviceTypeMF": "Mediform",
+  "@deviceTypeMF": {
+    "description": "Mediform device type"
+  },
+  "deviceTypeLU": "Dung tích phổi",
+  "@deviceTypeLU": {
+    "description": "Lung capacity device type"
+  },
+  "deviceTypeOM": "Khác",
+  "@deviceTypeOM": {
+    "description": "Other measuring device type"
+  },
+  "deviceSelectionTitle": "Thiết bị có sẵn",
+  "@deviceSelectionTitle": {
+    "description": "Device selection screen title"
+  },
+  "noDevicesAvailable": "Không có thiết bị nào có sẵn",
+  "@noDevicesAvailable": {
+    "description": "No devices available message"
+  },
+  "bloodPressureSample": "Mẫu huyết áp",
+  "@bloodPressureSample": {
+    "description": "Blood pressure sample button"
+  },
+  "bloodPressureResultTitle": "Kết quả đo huyết áp",
+  "@bloodPressureResultTitle": {
+    "description": "Blood pressure result screen title"
+  },
+  "systolicPressure": "Huyết áp tâm thu",
+  "@systolicPressure": {
+    "description": "Systolic blood pressure"
+  },
+  "diastolicPressure": "Huyết áp tâm trương",
+  "@diastolicPressure": {
+    "description": "Diastolic blood pressure"
+  },
+  "pulse": "Mạch",
+  "@pulse": {
+    "description": "Pulse"
+  },
+  "mmHg": "mmHg",
+  "@mmHg": {
+    "description": "Unit for blood pressure"
+  },
+  "bpm": "bpm",
+  "@bpm": {
+    "description": "Unit for pulse (beats per minute)"
+  },
+  "resultHidden": "Ẩn kết quả",
+  "@resultHidden": {
+    "description": "Hide result button"
+  },
+  "resultHiddenMessage": "Kết quả đã được ẩn",
+  "@resultHiddenMessage": {
+    "description": "Message when result is hidden"
+  },
+  "videoArea": "Khu vực video",
+  "@videoArea": {
+    "description": "Video area placeholder"
+  },
+  "remeasure": "Đo lại",
+  "@remeasure": {
+    "description": "Remeasure button"
+  },
+  "sendMessage": "Gửi tin nhắn",
+  "@sendMessage": {
+    "description": "Send message button"
+  },
+  "sendMessagePending": "Tính năng gửi tin nhắn đang được chuẩn bị.",
+  "@sendMessagePending": {
+    "description": "Message sending feature under preparation"
+  },
+  "bpStatusNormal": "Bình thường",
+  "@bpStatusNormal": {
+    "description": "Normal blood pressure status"
+  },
+  "bpStatusCaution": "Cảnh báo",
+  "@bpStatusCaution": {
+    "description": "Caution blood pressure status"
+  },
+  "bpStatusPreHypertension": "Tiền tăng huyết áp",
+  "@bpStatusPreHypertension": {
+    "description": "Prehypertension status"
+  },
+  "bpStatusHypertension1": "Tăng huyết áp Giai đoạn 1",
+  "@bpStatusHypertension1": {
+    "description": "Hypertension stage 1 status"
+  },
+  "bpStatusHypertension2": "Tăng huyết áp Giai đoạn 2",
+  "@bpStatusHypertension2": {
+    "description": "Hypertension stage 2 status"
+  },
+  "bpStatusHypertension3": "Tăng huyết áp Giai đoạn 3",
+  "@bpStatusHypertension3": {
+    "description": "Hypertension stage 3 status"
+  },
+  "heightWeightResultTitle": "Kết quả đo chiều cao & cân nặng",
+  "@heightWeightResultTitle": {
+    "description": "Height and weight measurement result title"
+  },
+  "bmiStatusUnderweight": "Thiếu cân",
+  "@bmiStatusUnderweight": {
+    "description": "BMI status underweight"
+  },
+  "bmiStatusNormal": "Bình thường",
+  "@bmiStatusNormal": {
+    "description": "BMI status normal"
+  },
+  "bmiStatusPreObese": "Tiền béo phì",
+  "@bmiStatusPreObese": {
+    "description": "BMI status pre-obese"
+  },
+  "bmiStatusObese1": "Béo phì độ I",
+  "@bmiStatusObese1": {
+    "description": "BMI status obesity stage 1"
+  },
+  "bmiStatusObese2": "Béo phì độ II",
+  "@bmiStatusObese2": {
+    "description": "BMI status obesity stage 2"
+  },
+  "bmiStatusObese3": "Béo phì độ III",
+  "@bmiStatusObese3": {
+    "description": "BMI status obesity stage 3"
+  },
+  "resultShow": "Hiển thị kết quả",
+  "@resultShow": {
+    "description": "Show result button"
+  },
+  "resultHiddenGuide": "Bạn có thể nhận kết quả đo qua tin nhắn văn bản.",
+  "@resultHiddenGuide": {
+    "description": "Guide message when result is hidden"
+  },
+  "sendMessageSuccess": "Kết quả đo đã được gửi.",
+  "@sendMessageSuccess": {
+    "description": "Message sent successfully"
+  },
+  "sendMessageSuccessHighlight": "Kết quả đo",
+  "@sendMessageSuccessHighlight": {
+    "description": "Highlighted text for message sent"
+  },
+  "sendMessageSuccessSuffix": " đã được gửi.",
+  "@sendMessageSuccessSuffix": {
+    "description": "Suffix after highlight for message sent success"
+  },
+  "languageSelection": "Chọn ngôn ngữ",
+  "@languageSelection": {
+    "description": "Language selection dialog title"
+  },
+  "languageButton": "Language",
+  "@languageButton": {
+    "description": "Language button label"
+  },
+  "helpButton": "Hướng dẫn sử dụng",
+  "@helpButton": {
+    "description": "Help button label"
+  },
+  "languageKoreanNative": "한국어",
+  "@languageKoreanNative": {
+    "description": "Korean in Korean"
+  },
+  "languageKoreanEng": "korean",
+  "@languageKoreanEng": {
+    "description": "Korean in English"
+  },
+  "languageEnglishNative": "English",
+  "@languageEnglishNative": {
+    "description": "English in English"
+  },
+  "languageEnglishEng": "English",
+  "@languageEnglishEng": {
+    "description": "English in English"
+  },
+  "guestPhoneInputTitle": "Vui lòng nhập số điện thoại của bạn.\nKết quả đo sẽ được gửi đến điện thoại của bạn.",
+  "@guestPhoneInputTitle": {
+    "description": "Guest phone input screen title"
+  },
+  "guestPhoneInputTitleHighlight1": "số điện thoại",
+  "@guestPhoneInputTitleHighlight1": {
+    "description": "Highlighted text 1"
+  },
+  "guestPhoneInputTitleHighlight2": "Kết quả đo",
+  "@guestPhoneInputTitleHighlight2": {
+    "description": "Highlighted text 2"
+  },
+  "agreeAllAndSend": "Đồng ý tất cả và gửi",
+  "@agreeAllAndSend": {
+    "description": "Agree all and send button"
+  },
+  "termsAgreement": "*Thỏa thuận điều khoản",
+  "@termsAgreement": {
+    "description": "Terms agreement section title"
+  },
+  "privacyPolicy": "Chính sách bảo mật (Bắt buộc)",
+  "@privacyPolicy": {
+    "description": "Privacy policy"
+  },
+  "termsOfService": "Điều khoản dịch vụ (Bắt buộc)",
+  "@termsOfService": {
+    "description": "Terms of service"
+  },
+  "thirdPartyInfo": "Thông tin bên thứ ba (Bắt buộc)",
+  "@thirdPartyInfo": {
+    "description": "Third party information"
+  },
+  "sensitiveInfo": "Thông tin nhạy cảm (Bắt buộc)",
+  "@sensitiveInfo": {
+    "description": "Sensitive information"
+  },
+  "viewDetails": "Xem",
+  "@viewDetails": {
+    "description": "View details button"
+  },
+  "agreementContentUnavailable": "Không tải được nội dung điều khoản. Vui lòng thử lại sau.",
+  "@agreementContentUnavailable": {
+    "description": "Shown when agreement image URL is missing or failed to load"
+  },
+  "bloodPressure": "Huyết áp",
+  "@bloodPressure": {
+    "description": "Blood pressure"
+  },
+  "systolicBloodPressure": "Huyết áp tâm thu",
+  "@systolicBloodPressure": {
+    "description": "Systolic blood pressure"
+  },
+  "diastolicBloodPressure": "Huyết áp tâm trương",
+  "@diastolicBloodPressure": {
+    "description": "Diastolic blood pressure"
+  },
+  "measurementResult": "Kết quả đo",
+  "@measurementResult": {
+    "description": "Measurement result"
+  },
+  "requestAuth": "Yêu cầu xác thực",
+  "@requestAuth": {
+    "description": "Request authentication button"
+  },
+  "verificationCode": "Mã xác thực",
+  "@verificationCode": {
+    "description": "Verification code"
+  },
+  "enterVerificationCode": "Vui lòng nhập mã xác thực.",
+  "@enterVerificationCode": {
+    "description": "Enter verification code hint"
+  },
+  "enterPhoneNumberCorrectly": "Vui lòng nhập số điện thoại đúng.",
+  "@enterPhoneNumberCorrectly": {
+    "description": "Enter phone number correctly message"
+  },
+  "enterBirthday": "Vui lòng nhập ngày sinh.",
+  "@enterBirthday": {
+    "description": "Enter birthday message"
+  },
+  "enterVerificationCode6Digits": "Vui lòng nhập mã xác thực 6 chữ số.",
+  "@enterVerificationCode6Digits": {
+    "description": "Enter 6-digit verification code message"
+  },
+  "enterVerificationCode4Digits": "Vui lòng nhập mã xác thực 4 chữ số.",
+  "@enterVerificationCode4Digits": {
+    "description": "Enter 4-digit verification code message"
+  },
+  "requestVerificationCodeFirst": "Vui lòng yêu cầu mã xác thực trước.",
+  "@requestVerificationCodeFirst": {
+    "description": "Request verification code first message"
+  },
+  "verificationFailed": "Xác thực thất bại",
+  "@verificationFailed": {
+    "description": "Verification failed title"
+  },
+  "verificationCodeMismatch": "Mã xác thực không khớp.",
+  "@verificationCodeMismatch": {
+    "description": "Verification code mismatch message"
+  },
+  "authRequired": "Yêu cầu xác thực",
+  "@authRequired": {
+    "description": "Authentication required title"
+  },
+  "requestAuthFirst": "Vui lòng yêu cầu xác thực trước.",
+  "@requestAuthFirst": {
+    "description": "Request authentication first message"
+  },
+  "error": "Lỗi",
+  "@error": {
+    "description": "Error title"
+  },
+  "authInfoNotFound": "Không tìm thấy thông tin xác thực.",
+  "@authInfoNotFound": {
+    "description": "Authentication info not found message"
+  },
+  "measurementInfoNotFound": "Không tìm thấy thông tin đo.",
+  "@measurementInfoNotFound": {
+    "description": "Measurement info not found message"
+  },
+  "enterCorrectPhoneNumber": "Vui lòng nhập số điện thoại đúng.",
+  "@enterCorrectPhoneNumber": {
+    "description": "Enter correct phone number message"
+  },
+  "enterCorrectBirthday": "Vui lòng nhập ngày sinh đúng.",
+  "@enterCorrectBirthday": {
+    "description": "Enter correct birthday message"
+  },
+  "measurementResultNotFound": "Không tìm thấy kết quả đo.",
+  "@measurementResultNotFound": {
+    "description": "Measurement result not found message"
+  },
+  "defaultKioskPlace": "Meditech Kiosk",
+  "@defaultKioskPlace": {
+    "description": "Default kiosk place name"
+  },
+  "male": "Nam",
+  "@male": {
+    "description": "Male gender"
+  },
+  "female": "Nữ",
+  "@female": {
+    "description": "Female gender"
+  },
+  "homeScreen": "Màn hình chính",
+  "@homeScreen": {
+    "description": "Home screen button"
+  },
+  "measurementGuide": "Hướng dẫn đo",
+  "@measurementGuide": {
+    "description": "Measurement guide"
+  },
+  "bloodPressureMeasurementGuide": "Hướng dẫn đo huyết áp",
+  "@bloodPressureMeasurementGuide": {
+    "description": "Blood pressure measurement guide"
+  },
+  "birthday": "Ngày sinh",
+  "@birthday": {
+    "description": "Birthday label"
+  },
+  "gender": "Giới tính",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "pleaseEnter": "Vui lòng nhập",
+  "@pleaseEnter": {
+    "description": "Please enter suffix"
+  },
+  "willBeSentToPhone": "sẽ được gửi đến điện thoại của bạn.",
+  "@willBeSentToPhone": {
+    "description": "Will be sent to phone message"
+  },
+  "am": "Sáng",
+  "@am": {
+    "description": "AM period"
+  },
+  "pm": "Chiều",
+  "@pm": {
+    "description": "PM period"
+  },
+  "guestAuthRequiredTitle": "Đo đã hoàn thành.",
+  "@guestAuthRequiredTitle": {
+    "description": "Guest authentication required title"
+  },
+  "guestAuthRequiredMessage": "Vui lòng nhập {highlight} để xem kết quả.",
+  "@guestAuthRequiredMessage": {
+    "description": "Guest authentication required message",
+    "placeholders": {
+      "highlight": {
+        "type": "String"
+      }
+    }
+  },
+  "guestAuthRequiredHighlight": "thông tin người dùng",
+  "@guestAuthRequiredHighlight": {
+    "description": "Guest authentication required highlight text"
+  },
+  "bluetoothDeviceManagement": "Quản lý thiết bị Bluetooth",
+  "@bluetoothDeviceManagement": {
+    "description": "Bluetooth device management title"
+  },
+  "bluetoothPairingGuide": "Hướng dẫn ghép nối Bluetooth",
+  "@bluetoothPairingGuide": {
+    "description": "Bluetooth pairing guide title"
+  },
+  "scanningDevices": "Đang tìm kiếm thiết bị",
+  "@scanningDevices": {
+    "description": "Scanning devices message"
+  },
+  "deviceFound": "Đã tìm thấy thiết bị",
+  "@deviceFound": {
+    "description": "Device found message"
+  },
+  "pairingRequired": "Yêu cầu ghép nối",
+  "@pairingRequired": {
+    "description": "Pairing required message"
+  },
+  "bluetoothNotEnabled": "Bluetooth chưa được bật",
+  "@bluetoothNotEnabled": {
+    "description": "Bluetooth not enabled message"
+  },
+  "permissionRequired": "Yêu cầu quyền Bluetooth",
+  "@permissionRequired": {
+    "description": "Bluetooth permission required message"
+  },
+  "connectDevice": "Kết nối",
+  "@connectDevice": {
+    "description": "Connect device button"
+  },
+  "disconnectDevice": "Ngắt kết nối",
+  "@disconnectDevice": {
+    "description": "Disconnect device button"
+  },
+  "registerDevice": "Đăng ký",
+  "@registerDevice": {
+    "description": "Register device button"
+  },
+  "deleteDevice": "Xóa",
+  "@deleteDevice": {
+    "description": "Delete device button"
+  },
+  "deviceConnectionSuccess": "Kết nối thành công",
+  "@deviceConnectionSuccess": {
+    "description": "Device connection success message"
+  },
+  "deviceConnectionFailed": "Kết nối thất bại",
+  "@deviceConnectionFailed": {
+    "description": "Device connection failed message"
+  },
+  "noDevicesFound": "Không tìm thấy thiết bị",
+  "@noDevicesFound": {
+    "description": "No devices found message"
+  },
+  "rescan": "Quét lại",
+  "@rescan": {
+    "description": "Rescan button"
+  },
+  "deviceConnectionNotConfirmed": "Kết nối thiết bị chưa được xác nhận",
+  "@deviceConnectionNotConfirmed": {
+    "description": "Device connection not confirmed message"
+  },
+  "deviceConnectionCheckMessage": "Vui lòng kiểm tra thiết bị và cổng.",
+  "@deviceConnectionCheckMessage": {
+    "description": "Message to check device and port"
+  },
+  "alcoResultTitle": "Kết quả đo nồng độ cồn",
+  "@alcoResultTitle": {
+    "description": "Alcohol test result screen title"
+  },
+  "alcoResultLoading": "Đang nhận dữ liệu kết quả...",
+  "@alcoResultLoading": {
+    "description": "Loading message on alcohol result screen"
+  },
+  "alcoResultHidden": "Kết quả đã được ẩn.",
+  "@alcoResultHidden": {
+    "description": "Hidden result message on alcohol result screen"
+  },
+  "alcoResultPass": "Kết quả đo bình thường.",
+  "@alcoResultPass": {
+    "description": "Alcohol result pass message"
+  },
+  "alcoResultPassSub": "(Khi nồng độ cồn trong máu dưới 0.030%)",
+  "@alcoResultPassSub": {
+    "description": "Alcohol result pass sub text"
+  },
+  "alcoResultFailGuide": "Vui lòng làm theo hướng dẫn của quản trị viên.",
+  "@alcoResultFailGuide": {
+    "description": "Alcohol result fail guide message"
+  },
+  "alcoResultFailSub": "(Khi nồng độ cồn trong máu từ 0.030% trở lên)",
+  "@alcoResultFailSub": {
+    "description": "Alcohol result fail sub text"
+  },
+  "hwHeightLabel": "Chiều cao",
+  "@hwHeightLabel": {
+    "description": "Height label in height/weight result"
+  },
+  "hwWeightLabel": "Cân nặng",
+  "@hwWeightLabel": {
+    "description": "Weight label in height/weight result"
+  },
+  "hwBmiLabel": "BMI",
+  "@hwBmiLabel": {
+    "description": "BMI label in height/weight result"
+  }
+}

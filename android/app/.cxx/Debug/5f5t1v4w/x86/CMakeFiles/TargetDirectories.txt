@@ -1,0 +1,2 @@
+/Users/anasa/school/novellink/flutter-mtad-v1/android/app/.cxx/Debug/5f5t1v4w/x86/CMakeFiles/edit_cache.dir
+/Users/anasa/school/novellink/flutter-mtad-v1/android/app/.cxx/Debug/5f5t1v4w/x86/CMakeFiles/rebuild_cache.dir
