@@ -317,6 +317,7 @@ class _MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
     final locale = ref.watch(localeProvider);
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Template',
       locale: locale,
       navigatorKey: navigatorKey,

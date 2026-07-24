@@ -343,6 +343,8 @@ class _AlcoMeasurementScreenState extends ConsumerState<AlcoMeasurementScreen>
       );
     }
 
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return GestureDetector(
       onTapDown: (_) => resetCurrentTimer(),
       onPanDown: (_) => resetCurrentTimer(),
@@ -355,87 +357,121 @@ class _AlcoMeasurementScreenState extends ConsumerState<AlcoMeasurementScreen>
             children: [
               LayoutBuilder(
                 builder: (context, constraints) {
-              final screenWidth = constraints.maxWidth;
-              final availableHeight = constraints.maxHeight;
+                  final screenWidth = constraints.maxWidth;
+                  final availableHeight = constraints.maxHeight;
+                  final isMobile = screenWidth < 600;
 
-              final rawTopVideoHeight = screenWidth * 3 / 4;
-              final rawBottomVideoHeight = screenWidth * 9 / 16;
-              final rawTotalVideo = rawTopVideoHeight + rawBottomVideoHeight;
+                  final rawTopVideoHeight = screenWidth * 3 / 4;
+                  final rawBottomVideoHeight = screenWidth * 9 / 16;
+                  final rawTotalVideo = rawTopVideoHeight + rawBottomVideoHeight;
 
-              final minFooterHeight =
-                  (availableHeight * 0.12).clamp(80.0, 200.0);
-              final maxTotalVideo = availableHeight - minFooterHeight;
+                  final minFooterHeight =
+                      (availableHeight * 0.12).clamp(80.0, 200.0);
+                  final maxTotalVideo = availableHeight - minFooterHeight;
 
-              final double topVideoHeight;
-              final double bottomVideoMaxHeight;
+                  final double topVideoHeight;
+                  final double bottomVideoMaxHeight;
 
-              if (rawTotalVideo <= maxTotalVideo) {
-                topVideoHeight = rawTopVideoHeight;
-                bottomVideoMaxHeight = rawBottomVideoHeight;
-              } else {
-                final scale = maxTotalVideo / rawTotalVideo;
-                topVideoHeight = rawTopVideoHeight * scale;
-                bottomVideoMaxHeight = rawBottomVideoHeight * scale;
-              }
+                  if (isMobile) {
+                    topVideoHeight = screenWidth * 3 / 4;
+                    bottomVideoMaxHeight = screenWidth * 9 / 16;
+                  } else {
+                    if (rawTotalVideo <= maxTotalVideo) {
+                      topVideoHeight = rawTopVideoHeight;
+                      bottomVideoMaxHeight = rawBottomVideoHeight;
+                    } else {
+                      final scale = maxTotalVideo / rawTotalVideo;
+                      topVideoHeight = rawTopVideoHeight * scale;
+                      bottomVideoMaxHeight = rawBottomVideoHeight * scale;
+                    }
+                  }
 
-              return Column(
-                children: [
-                  SizedBox(
-                    height: topVideoHeight,
-                    child: Center(
-                      child: ConstrainedBox(
-                        constraints: BoxConstraints(
-                          maxWidth: screenWidth,
-                          maxHeight: topVideoHeight,
+                  return Column(
+                    children: [
+                      SizedBox(
+                        height: topVideoHeight,
+                        child: Center(
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints(
+                              maxWidth: screenWidth,
+                              maxHeight: topVideoHeight,
+                            ),
+                            child: _pageOption!.menual.isNotEmpty
+                                ? MeasurementMediaPlayer(
+                                    key: ValueKey(
+                                        'alco_top_${_instanceId}_$_mediaKey'),
+                                    mediaItems: _pageOption!.menual,
+                                    baseUrl: Config.baseUrl,
+                                    playerId: 'alco_top_${_instanceId}',
+                                    isActive: _isVideoActive,
+                                  )
+                                : Container(color: Colors.black),
+                          ),
                         ),
-                        child: _pageOption!.menual.isNotEmpty
-                            ? MeasurementMediaPlayer(
-                                key: ValueKey(
-                                    'alco_top_${_instanceId}_$_mediaKey'),
-                                mediaItems: _pageOption!.menual,
-                                baseUrl: Config.baseUrl,
-                                playerId: 'alco_top_${_instanceId}',
-                                isActive: _isVideoActive,
-                              )
-                            : Container(color: Colors.black),
                       ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: bottomVideoMaxHeight,
-                    child: Center(
-                      child: ConstrainedBox(
-                        constraints: BoxConstraints(
-                          maxWidth: screenWidth,
-                          maxHeight: bottomVideoMaxHeight,
+                      SizedBox(
+                        height: bottomVideoMaxHeight,
+                        child: Center(
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints(
+                              maxWidth: screenWidth,
+                              maxHeight: bottomVideoMaxHeight,
+                            ),
+                            child: _pageOption!.cm.isNotEmpty
+                                ? MeasurementMediaPlayer(
+                                    key: ValueKey(
+                                        'alco_bottom_${_instanceId}_$_mediaKey'),
+                                    mediaItems: _pageOption!.cm,
+                                    baseUrl: Config.baseUrl,
+                                    playerId: 'alco_bottom_${_instanceId}',
+                                    isActive: _isVideoActive,
+                                  )
+                                : Container(color: Colors.black),
+                          ),
                         ),
-                        child: _pageOption!.cm.isNotEmpty
-                            ? MeasurementMediaPlayer(
-                                key: ValueKey(
-                                    'alco_bottom_${_instanceId}_$_mediaKey'),
-                                mediaItems: _pageOption!.cm,
-                                baseUrl: Config.baseUrl,
-                                playerId: 'alco_bottom_${_instanceId}',
-                                isActive: _isVideoActive,
-                              )
-                            : Container(color: Colors.black),
                       ),
-                    ),
-                  ),
-                  Expanded(
-                    child: MeasurementFooter(
-                      key: ValueKey('alco_footer_${_instanceId}_$_mediaKey'),
-                      height: double.infinity,
-                      onHomePressed: () =>
-                          Navigator.of(context)
-                              .popUntil((route) => route.isFirst),
-                      waitTimeSeconds: _pageOption!.waittime,
-                    ),
-                  ),
-                ],
-              );
-            },
-          ),
+                      Expanded(
+                        child: LayoutBuilder(
+                          builder: (context, footerConstraints) {
+                            final isMobile = screenWidth < 600;
+                            double getResponsiveSize(double baseSize) {
+                              final baseWidth = 1080.0;
+                              return (screenWidth / baseWidth * baseSize)
+                                  .clamp(baseSize * 0.5, baseSize * 1.5);
+                            }
+
+                            final double footerHeight = isMobile
+                                ? getResponsiveSize(250.0)
+                                : double.infinity;
+
+                            return Align(
+                              alignment: isMobile
+                                  ? Alignment.center
+                                  : Alignment.bottomCenter,
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                    bottom: isMobile ? 0.0 : 0.0),
+                                child: SizedBox(
+                                  height: footerHeight,
+                                  child: MeasurementFooter(
+                                    key: ValueKey(
+                                        'alco_footer_${_instanceId}_$_mediaKey'),
+                                    height: footerHeight,
+                                    onHomePressed: () =>
+                                        Navigator.of(context)
+                                            .popUntil((route) => route.isFirst),
+                                    waitTimeSeconds: _pageOption!.waittime,
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
               if (_isDemoMode)
                 Positioned(
                   top: 16,
@@ -443,13 +479,12 @@ class _AlcoMeasurementScreenState extends ConsumerState<AlcoMeasurementScreen>
                   child: GestureDetector(
                     onTap: _navigateToDemoResult,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 10,
-                      ),
+                      padding: screenWidth < 600
+                          ? const EdgeInsets.symmetric(horizontal: 8, vertical: 4)
+                          : const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                       decoration: BoxDecoration(
                         color: Colors.orange.withOpacity(0.9),
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(screenWidth < 600 ? 4 : 8),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.2),
@@ -458,21 +493,21 @@ class _AlcoMeasurementScreenState extends ConsumerState<AlcoMeasurementScreen>
                           ),
                         ],
                       ),
-                      child: const Row(
+                      child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Icon(
                             Icons.play_arrow,
                             color: Colors.white,
-                            size: 20,
+                            size: screenWidth < 600 ? 12 : 20,
                           ),
-                          SizedBox(width: 6),
+                          SizedBox(width: screenWidth < 600 ? 3 : 6),
                           Text(
                             'DEMO',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 14,
-                              fontVariations: <FontVariation>[
+                              fontSize: screenWidth < 600 ? 10 : 14,
+                              fontVariations: const <FontVariation>[
                                 FontVariation('wght', 700)
                               ],
                             ),

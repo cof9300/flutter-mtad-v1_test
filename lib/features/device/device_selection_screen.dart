@@ -239,10 +239,14 @@ class _DeviceSelectionScreenState extends ConsumerState<DeviceSelectionScreen>
   List<Device> _buildDisplayDevices(List<Device> devices) {
     if (_isKioskDemo) {
       if (devices.isEmpty) {
-        return [Device(type: 'BP', name: '', isConnected: true)];
+        return [
+          Device(type: 'BP', name: '혈압', isConnected: true),
+          Device(type: 'AL', name: '음주', isConnected: true),
+        ];
       }
       return devices.map((d) {
-        if (d.type.toUpperCase() == 'BP') {
+        final type = d.type.toUpperCase();
+        if (type == 'BP' || type == 'AL') {
           return d.copyWith(isConnected: true);
         }
         return d;

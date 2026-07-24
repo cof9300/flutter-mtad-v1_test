@@ -8,6 +8,8 @@ import 'package:flutter_template/features/measurement/widget/measurement_media_p
 import 'package:flutter_template/features/measurement/widget/measurement_footer.dart';
 import 'package:flutter_template/features/measurement/screen/blood_pressure_result_screen_new.dart';
 import 'package:flutter_template/features/measurement/model/blood_pressure_result.dart';
+import 'package:flutter_template/features/measurement/screen/alco_result_screen.dart';
+import 'package:flutter_template/features/measurement/model/alco_measurement_result.dart';
 import 'package:flutter_template/providers/notifier/header_title_notifier.dart';
 import 'package:flutter_template/core/utils/auto_return_mixin.dart';
 import 'package:flutter_template/config/service_locator.dart';
@@ -181,19 +183,37 @@ class _MeasurementScreenState extends ConsumerState<MeasurementScreen>
   }
 
   void _navigateToDemoResult() {
-    final demoResult = BloodPressureResult(
-      systolic: 120,
-      diastolic: 80,
-      pulse: 72,
-      measuredAt: DateTime.now(),
-    );
+    final deviceUpper = widget.deviceType.toUpperCase();
+    if (deviceUpper == 'BP') {
+      final demoResult = BloodPressureResult(
+        systolic: 120,
+        diastolic: 80,
+        pulse: 72,
+        measuredAt: DateTime.now(),
+      );
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => BloodPressureResultScreenNew(result: demoResult),
-      ),
-    );
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => BloodPressureResultScreenNew(result: demoResult),
+        ),
+      );
+    } else if (deviceUpper == 'AL' || deviceUpper == 'ALCO') {
+      final demoResult = AlcoMeasurementResult(
+        isSuccess: true,
+        bacValue: 0.000,
+        isPass: true,
+        errorCode: 0,
+        measuredAt: DateTime.now(),
+      );
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => AlcoResultScreen(result: demoResult),
+        ),
+      );
+    }
   }
 
   @override

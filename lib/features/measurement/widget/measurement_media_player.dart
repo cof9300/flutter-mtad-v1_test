@@ -333,7 +333,10 @@ class _MeasurementMediaPlayerState extends State<MeasurementMediaPlayer>
       );
     }
 
-    if (_isVideoType) {
+    final item = widget.mediaItems[_currentIndex];
+    final isVideoType = _isVideo(item.path);
+
+    if (isVideoType) {
       if (_isG10) {
         if (_vpController != null && _vpController!.value.isInitialized) {
           return _buildG10Video(_vpController!);
@@ -352,7 +355,6 @@ class _MeasurementMediaPlayerState extends State<MeasurementMediaPlayer>
       );
     }
 
-    final item = widget.mediaItems[_currentIndex];
     final isLocal = _isLocalFile(item.path);
 
     if (isLocal) {
@@ -360,7 +362,7 @@ class _MeasurementMediaPlayerState extends State<MeasurementMediaPlayer>
         child: SizedBox.expand(
           child: Image.file(
             File(item.path),
-            fit: isMobile ? BoxFit.fill : BoxFit.cover,
+            fit: BoxFit.cover,
             frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
               if (wasSynchronouslyLoaded || frame != null) return child;
               return _buildLoadingOverlay();
@@ -390,7 +392,7 @@ class _MeasurementMediaPlayerState extends State<MeasurementMediaPlayer>
           ),
           imageBuilder: (context, imageProvider) => Image(
             image: imageProvider,
-            fit: isMobile ? BoxFit.fill : BoxFit.cover,
+            fit: BoxFit.cover,
           ),
         ),
       ),

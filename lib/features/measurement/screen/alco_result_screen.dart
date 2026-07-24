@@ -220,6 +220,8 @@ class _AlcoResultScreenState extends ConsumerState<AlcoResultScreen>
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
     return GestureDetector(
       onTapDown: (_) {
         if (!_isHidden) resetCurrentTimer();
@@ -236,9 +238,11 @@ class _AlcoResultScreenState extends ConsumerState<AlcoResultScreen>
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  bottom: DeviceConfig().isTabletSized(context)
-                      ? _getResponsiveSize(context, 200)
-                      : _getResponsiveSize(context, 280),
+                  bottom: isMobile
+                      ? (MediaQuery.of(context).size.height < 850 ? 150.0 : 175.0)
+                      : (DeviceConfig().isTabletSized(context)
+                          ? _getResponsiveSize(context, 200)
+                          : _getResponsiveSize(context, 280)),
                 ),
                 child: Column(
                   children: [
@@ -250,24 +254,26 @@ class _AlcoResultScreenState extends ConsumerState<AlcoResultScreen>
                           width: double.infinity,
                           child: Padding(
                             padding: EdgeInsets.only(
-                              top: _getResponsiveSize(context, 30),
+                              top: isMobile ? 0.0 : _getResponsiveSize(context, 30),
                             ),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 SizedBox(
-                                  height: _getResponsiveSize(context, 620),
+                                  height: isMobile
+                                      ? (screenWidth * 0.68)
+                                      : _getResponsiveSize(context, 620),
                                   child: Align(
-                                    alignment: Alignment.topCenter,
+                                    alignment: _isHidden
+                                        ? Alignment.center
+                                        : Alignment.topCenter,
                                     child: _isHidden
                                         ? _buildHiddenContent(context)
-                                        : Center(
-                                            child: widget.result.isPass
-                                                ? AlcoResultPassContent(
-                                                    result: widget.result)
-                                                : AlcoResultFailContent(
-                                                    result: widget.result),
-                                          ),
+                                        : (widget.result.isPass
+                                            ? AlcoResultPassContent(
+                                                result: widget.result)
+                                            : AlcoResultFailContent(
+                                                result: widget.result)),
                                   ),
                                 ),
                                 _buildVideoSection(context),
@@ -296,12 +302,17 @@ class _AlcoResultScreenState extends ConsumerState<AlcoResultScreen>
                 child: _buildHideButton(context),
               ),
               Positioned(
-                bottom: _getResponsiveSize(context, 40),
+                bottom: isMobile ? 54.0 : _getResponsiveSize(context, 40),
                 left: 0,
                 right: 0,
-                child: AlcoResultActionButtons(
-                  onRetry: _handleRetry,
-                  onSendMessage: _isSmsEnabled ? _handleSendMessage : null,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: _getResponsiveSize(context, 28),
+                  ),
+                  child: AlcoResultActionButtons(
+                    onRetry: _handleRetry,
+                    onSendMessage: _isSmsEnabled ? _handleSendMessage : null,
+                  ),
                 ),
               ),
               if (_isLoading)
@@ -358,9 +369,17 @@ class _AlcoResultScreenState extends ConsumerState<AlcoResultScreen>
 
   Widget _buildHideButton(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
+
     final iconPath =
         _isHidden ? 'assets/icons/show.svg' : 'assets/icons/hide.svg';
     final label = _isHidden ? l10n.resultShow : l10n.resultHidden;
+
+    final double buttonSize = isMobile ? 38.0 : _getResponsiveSize(context, 80);
+    final double iconSize = isMobile ? 22.0 : _getResponsiveSize(context, 44);
+    final double borderRadius = isMobile ? 19.0 : _getResponsiveSize(context, 40);
+    final double paddingValue = isMobile ? 8.0 : _getResponsiveSize(context, 18);
 
     return GestureDetector(
       onTap: _toggleHidden,
@@ -368,29 +387,31 @@ class _AlcoResultScreenState extends ConsumerState<AlcoResultScreen>
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: _getResponsiveSize(context, 80),
-            height: _getResponsiveSize(context, 80),
+            width: buttonSize,
+            height: buttonSize,
             decoration: BoxDecoration(
-              color: const Color(0xFFE7EAF3),
-              borderRadius: BorderRadius.circular(
-                _getResponsiveSize(context, 40),
-              ),
+              color: isMobile ? Colors.white : const Color(0xFFE7EAF3),
+              borderRadius: BorderRadius.circular(borderRadius),
             ),
-            padding: EdgeInsets.all(_getResponsiveSize(context, 18)),
+            padding: EdgeInsets.all(paddingValue),
             child: SvgPicture.asset(
               iconPath,
-              width: _getResponsiveSize(context, 44),
-              height: _getResponsiveSize(context, 44),
+              width: iconSize,
+              height: iconSize,
             ),
           ),
-          SizedBox(height: _getResponsiveSize(context, 4)),
-          Text(
-            label,
-            style: TextStyle(
-              fontFamily: AppTextStyles.bodyFontFamily,
-              fontSize: _getResponsiveSize(context, 28),
-              color: const Color(0xFF4C4948),
-              letterSpacing: -0.7,
+          SizedBox(height: isMobile ? 0.0 : _getResponsiveSize(context, 4)),
+          Transform.translate(
+            offset: Offset(0, isMobile ? -4.0 : 0.0),
+            child: Text(
+              label,
+              style: TextStyle(
+                fontFamily: AppTextStyles.bodyFontFamily,
+                fontSize: isMobile ? 11.2 : _getResponsiveSize(context, 28),
+                color: isMobile ? const Color(0xFF505050) : const Color(0xFF4C4948),
+                letterSpacing: isMobile ? -0.8 : -0.7,
+                height: isMobile ? 1.0 : null,
+              ),
             ),
           ),
         ],
@@ -399,30 +420,42 @@ class _AlcoResultScreenState extends ConsumerState<AlcoResultScreen>
   }
 
   Widget _buildHiddenContent(BuildContext context) {
-    final lockSize = _getResponsiveSize(context, 240);
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
+
+    final lockSize = isMobile
+        ? 70.0
+        : _getResponsiveSize(context, 240);
+    final topSpace = isMobile
+        ? 0.0
+        : _getResponsiveSize(context, 80);
+
     return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(height: _getResponsiveSize(context, 80)),
+          SizedBox(height: topSpace),
           SvgPicture.asset(
             'assets/images/hide_view.svg',
             width: lockSize,
             height: lockSize,
           ),
           SizedBox(height: _getResponsiveSize(context, 30)),
-          Text(
-            AppLocalizations.of(context)!.alcoResultHidden,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: AppTextStyles.bodyFontFamily,
-              fontSize: _getResponsiveSize(context, 46),
-              fontVariations: const <FontVariation>[
-                FontVariation('wght', 700)
-              ],
-              color: const Color(0xFF227EFF),
-              letterSpacing: -1.6,
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: _getResponsiveSize(context, 40),
+            ),
+            child: Text(
+              AppLocalizations.of(context)!.alcoResultHidden,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: AppTextStyles.bodyFontFamily,
+                fontSize: isMobile ? 15.0 : _getResponsiveSize(context, 46),
+                fontVariations: const <FontVariation>[FontVariation('wght', 700)],
+                color: const Color(0xFF227EFF),
+                letterSpacing: isMobile ? -0.8 : -1.6,
+              ),
             ),
           ),
         ],
@@ -433,9 +466,19 @@ class _AlcoResultScreenState extends ConsumerState<AlcoResultScreen>
   Widget _buildVideoSection(BuildContext context) {
     final resultPageOption = ref.watch(resultPageOptionProvider);
     final cmList = resultPageOption?.cm ?? [];
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
+
+    final double width = isMobile
+        ? screenWidth
+        : _getResponsiveSize(context, 1024);
+    final double height = isMobile
+        ? width * 9 / 16
+        : _getResponsiveSize(context, 576);
+
     return SizedBox(
-      width: _getResponsiveSize(context, 1024),
-      height: _getResponsiveSize(context, 576),
+      width: width,
+      height: height,
       child: cmList.isNotEmpty
           ? MeasurementMediaPlayer(
               key: ValueKey('alco_result_video_$_videoKey'),
