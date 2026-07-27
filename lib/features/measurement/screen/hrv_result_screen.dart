@@ -21,6 +21,7 @@ import 'package:flutter_template/providers/notifier/measure_id_notifier.dart';
 import 'package:flutter_template/providers/notifier/user_auth_notifier.dart';
 import 'package:flutter_template/providers/notifier/guest_measure_flag_notifier.dart';
 import 'package:flutter_template/providers/notifier/device_list_with_connection_notifier.dart';
+import 'package:flutter_template/providers/notifier/mf_device_notifier.dart';
 import 'package:flutter_template/features/device/device_selection_screen.dart';
 import 'package:flutter_template/config/service_locator.dart';
 import 'package:flutter_template/config/config.dart';
@@ -299,9 +300,10 @@ class _HrvResultScreenState extends ConsumerState<HrvResultScreen>
   void _handleRetry() {
     FlutterErrorLogger.logInfo('[자율신경측정] 재측정 버튼 클릭');
     final devices = ref.read(deviceListWithConnectionProvider);
-    final connectedDevices = devices.where((d) => d.isConnected).toList();
+    final hasMf = ref.read(mfDeviceProvider) != null;
+    final totalConfigured = devices.length + (hasMf ? 1 : 0);
 
-    if (connectedDevices.length >= 2) {
+    if (totalConfigured >= 2) {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => const DeviceSelectionScreen()),

@@ -229,11 +229,10 @@ class _BloodPressureResultScreenNewState
     if (!mounted) return;
 
     final devices = ref.read(deviceListWithConnectionProvider);
-    final connectedDevices = devices.where((d) => d.isConnected).toList();
     final hasMf = ref.read(mfDeviceProvider) != null;
-    final totalConnected = connectedDevices.length + (hasMf ? 1 : 0);
+    final totalConfigured = devices.length + (hasMf ? 1 : 0);
 
-    if (totalConnected >= 2) {
+    if (totalConfigured >= 2) {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(

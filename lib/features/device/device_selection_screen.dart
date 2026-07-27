@@ -106,8 +106,9 @@ class _DeviceSelectionScreenState extends ConsumerState<DeviceSelectionScreen>
     final hasMf = mfDevice != null;
 
     final totalConnected = connectedHwDevices.length + (hasMf ? 1 : 0);
+    final totalConfigured = hwDevices.length + (hasMf ? 1 : 0);
 
-    if (totalConnected == 1 && !hasMf) {
+    if (totalConfigured == 1 && totalConnected == 1 && !hasMf) {
       final device = connectedHwDevices.first;
       final type = device.type.toUpperCase();
 

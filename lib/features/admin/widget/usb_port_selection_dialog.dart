@@ -271,8 +271,13 @@ class _UsbPortSelectionDialogState
     ref.listen(usbDevicesProvider, (_, __) => _loadExistingMapping());
     final displayName =
         DeviceTypeHelper.getDeviceTypeName(context, widget.device.type);
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
 
     return AlertDialog(
+      titlePadding: isMobile ? const EdgeInsets.fromLTRB(20, 20, 20, 8) : null,
+      contentPadding: isMobile ? const EdgeInsets.symmetric(horizontal: 20, vertical: 8) : null,
+      actionsPadding: isMobile ? const EdgeInsets.fromLTRB(16, 0, 16, 16) : null,
       title: Row(
         children: [
           Expanded(
@@ -283,18 +288,18 @@ class _UsbPortSelectionDialogState
                   'USB 포트 선택',
                   style: TextStyle(
                     fontFamily: AppTextStyles.bodyFontFamily,
-                    fontSize: _getResponsiveSize(context, 32),
+                    fontSize: isMobile ? 18.0 : _getResponsiveSize(context, 32),
                     fontVariations: <FontVariation>[
                       FontVariation('wght', 700),
                     ],
                   ),
                 ),
-                SizedBox(height: _getResponsiveSize(context, 8)),
+                SizedBox(height: isMobile ? 4.0 : _getResponsiveSize(context, 8)),
                 RichText(
                   text: TextSpan(
                     style: TextStyle(
                       fontFamily: AppTextStyles.bodyFontFamily,
-                      fontSize: _getResponsiveSize(context, 24),
+                      fontSize: isMobile ? 13.0 : _getResponsiveSize(context, 24),
                       color: AppColors.primary,
                       fontVariations: <FontVariation>[
                         FontVariation('wght', 600),
@@ -305,11 +310,11 @@ class _UsbPortSelectionDialogState
                       TextSpan(
                         text: ' (${widget.device.name})',
                         style: TextStyle(
-                          fontSize: _getResponsiveSize(context, 20),
+                          fontSize: isMobile ? 11.0 : _getResponsiveSize(context, 20),
                           fontVariations: <FontVariation>[
                             FontVariation('wght', 400),
                           ],
-                          color: Color(0xFF666666),
+                          color: const Color(0xFF666666),
                         ),
                       ),
                     ],
@@ -320,14 +325,14 @@ class _UsbPortSelectionDialogState
           ),
           if (_isRefreshing)
             SizedBox(
-              width: 20,
-              height: 20,
-              child: CircularProgressIndicator(strokeWidth: 2),
+              width: isMobile ? 16 : 20,
+              height: isMobile ? 16 : 20,
+              child: const CircularProgressIndicator(strokeWidth: 2),
             ),
         ],
       ),
       content: SizedBox(
-        width: _getResponsiveSize(context, 700),
+        width: isMobile ? screenWidth * 0.85 : _getResponsiveSize(context, 700),
         child: usbDevices.isEmpty
             ? _buildEmptyState(context)
             : _buildDeviceList(context, usbDevices),
@@ -338,17 +343,18 @@ class _UsbPortSelectionDialogState
             onPressed: _showRemoveConfirmDialog,
             icon: Icon(
               Icons.link_off,
-              size: _getResponsiveSize(context, 24),
+              size: isMobile ? 16.0 : _getResponsiveSize(context, 24),
               color: Colors.red,
             ),
             style: TextButton.styleFrom(
               foregroundColor: Colors.red,
+              padding: isMobile ? const EdgeInsets.symmetric(horizontal: 8, vertical: 4) : null,
             ),
             label: Text(
               '연결 해제',
               style: TextStyle(
                 fontFamily: AppTextStyles.bodyFontFamily,
-                fontSize: _getResponsiveSize(context, 24),
+                fontSize: isMobile ? 13.0 : _getResponsiveSize(context, 24),
                 fontVariations: <FontVariation>[
                   FontVariation('wght', 600),
                 ],
@@ -361,18 +367,18 @@ class _UsbPortSelectionDialogState
             '취소',
             style: TextStyle(
               fontFamily: AppTextStyles.bodyFontFamily,
-              fontSize: _getResponsiveSize(context, 24),
+              fontSize: isMobile ? 13.0 : _getResponsiveSize(context, 24),
             ),
           ),
         ),
         TextButton.icon(
           onPressed: _refreshDevices,
-          icon: Icon(Icons.refresh, size: _getResponsiveSize(context, 24)),
+          icon: Icon(Icons.refresh, size: isMobile ? 16.0 : _getResponsiveSize(context, 24)),
           label: Text(
             '새로고침',
             style: TextStyle(
               fontFamily: AppTextStyles.bodyFontFamily,
-              fontSize: _getResponsiveSize(context, 24),
+              fontSize: isMobile ? 13.0 : _getResponsiveSize(context, 24),
             ),
           ),
         ),
@@ -381,35 +387,38 @@ class _UsbPortSelectionDialogState
   }
 
   Widget _buildEmptyState(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
+
     return Padding(
-      padding: EdgeInsets.all(_getResponsiveSize(context, 40)),
+      padding: EdgeInsets.all(isMobile ? 20.0 : _getResponsiveSize(context, 40)),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(
             Icons.usb_off,
-            size: _getResponsiveSize(context, 80),
+            size: isMobile ? 40.0 : _getResponsiveSize(context, 80),
             color: Colors.grey,
           ),
-          SizedBox(height: _getResponsiveSize(context, 20)),
+          SizedBox(height: isMobile ? 12.0 : _getResponsiveSize(context, 20)),
           Text(
             'USB 포트가 감지되지 않습니다',
             style: TextStyle(
               fontFamily: AppTextStyles.bodyFontFamily,
-              fontSize: _getResponsiveSize(context, 28),
+              fontSize: isMobile ? 15.0 : _getResponsiveSize(context, 28),
               fontVariations: <FontVariation>[
                 FontVariation('wght', 600),
               ],
-              color: Color(0xFF111111),
+              color: const Color(0xFF111111),
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: _getResponsiveSize(context, 12)),
+          SizedBox(height: isMobile ? 8.0 : _getResponsiveSize(context, 12)),
           Text(
             'USB 기기를 연결한 후\n새로고침 버튼을 눌러주세요',
             style: TextStyle(
               fontFamily: AppTextStyles.bodyFontFamily,
-              fontSize: _getResponsiveSize(context, 22),
+              fontSize: isMobile ? 12.0 : _getResponsiveSize(context, 22),
               color: Colors.grey,
             ),
             textAlign: TextAlign.center,
@@ -422,6 +431,8 @@ class _UsbPortSelectionDialogState
   Widget _buildDeviceList(BuildContext context, List<UsbDeviceInfo> devices) {
     final allDevices = <UsbDeviceInfo>[...devices]
       ..sort((a, b) => a.portName.compareTo(b.portName));
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
 
     return ListView.builder(
       shrinkWrap: true,
@@ -437,7 +448,7 @@ class _UsbPortSelectionDialogState
         final isUsedByOther = otherDeviceType != null;
 
         return Container(
-          margin: EdgeInsets.only(bottom: _getResponsiveSize(context, 12)),
+          margin: EdgeInsets.only(bottom: isMobile ? 8.0 : _getResponsiveSize(context, 12)),
           decoration: BoxDecoration(
             border: Border.all(
               color: isRegistered
@@ -448,12 +459,13 @@ class _UsbPortSelectionDialogState
               width: isRegistered ? 2 : 1,
             ),
             borderRadius:
-                BorderRadius.circular(_getResponsiveSize(context, 12)),
+                BorderRadius.circular(isMobile ? 8.0 : _getResponsiveSize(context, 12)),
             color: isUsedByOther && !isRegistered
                 ? Colors.orange.withValues(alpha: 0.04)
                 : null,
           ),
           child: ListTile(
+            contentPadding: isMobile ? const EdgeInsets.symmetric(horizontal: 12, vertical: 4) : null,
             leading: Icon(
               Icons.usb,
               color: isRegistered
@@ -461,32 +473,35 @@ class _UsbPortSelectionDialogState
                   : isUsedByOther
                       ? Colors.orange
                       : Colors.grey,
-              size: _getResponsiveSize(context, 32),
+              size: isMobile ? 22.0 : _getResponsiveSize(context, 32),
             ),
             title: Row(
               children: [
-                Text(
-                  device.displayName,
-                  style: TextStyle(
-                    fontFamily: AppTextStyles.bodyFontFamily,
-                    fontSize: _getResponsiveSize(context, 26),
-                    fontVariations: <FontVariation>[
-                      FontVariation('wght', isRegistered ? 700 : 500),
-                    ],
-                    color: Colors.black,
+                Expanded(
+                  child: Text(
+                    device.displayName,
+                    style: TextStyle(
+                      fontFamily: AppTextStyles.bodyFontFamily,
+                      fontSize: isMobile ? 14.0 : _getResponsiveSize(context, 26),
+                      fontVariations: <FontVariation>[
+                        FontVariation('wght', isRegistered ? 700 : 500),
+                      ],
+                      color: Colors.black,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 if (isUsedByOther) ...[
-                  SizedBox(width: _getResponsiveSize(context, 8)),
+                  SizedBox(width: isMobile ? 4.0 : _getResponsiveSize(context, 8)),
                   Container(
                     padding: EdgeInsets.symmetric(
-                      horizontal: _getResponsiveSize(context, 10),
-                      vertical: _getResponsiveSize(context, 3),
+                      horizontal: isMobile ? 6.0 : _getResponsiveSize(context, 10),
+                      vertical: isMobile ? 2.0 : _getResponsiveSize(context, 3),
                     ),
                     decoration: BoxDecoration(
                       color: Colors.orange.withValues(alpha: 0.15),
                       borderRadius:
-                          BorderRadius.circular(_getResponsiveSize(context, 6)),
+                          BorderRadius.circular(isMobile ? 4.0 : _getResponsiveSize(context, 6)),
                       border: Border.all(
                         color: Colors.orange.withValues(alpha: 0.5),
                       ),
@@ -495,7 +510,7 @@ class _UsbPortSelectionDialogState
                       otherDeviceType,
                       style: TextStyle(
                         fontFamily: AppTextStyles.bodyFontFamily,
-                        fontSize: _getResponsiveSize(context, 18),
+                        fontSize: isMobile ? 10.0 : _getResponsiveSize(context, 18),
                         fontVariations: const <FontVariation>[
                           FontVariation('wght', 700),
                         ],
@@ -509,34 +524,34 @@ class _UsbPortSelectionDialogState
             subtitle: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: _getResponsiveSize(context, 4)),
+                SizedBox(height: isMobile ? 2.0 : _getResponsiveSize(context, 4)),
                 Text(
                   device.portLabel,
                   style: TextStyle(
                     fontFamily: AppTextStyles.bodyFontFamily,
-                    fontSize: _getResponsiveSize(context, 20),
-                    color: Color(0xFF444444),
+                    fontSize: isMobile ? 11.0 : _getResponsiveSize(context, 20),
+                    color: const Color(0xFF444444),
                     fontVariations: <FontVariation>[
                       FontVariation('wght', 500),
                     ],
                   ),
                 ),
-                SizedBox(height: _getResponsiveSize(context, 2)),
+                SizedBox(height: isMobile ? 1.0 : _getResponsiveSize(context, 2)),
                 Text(
                   device.vidPidString,
                   style: TextStyle(
                     fontFamily: AppTextStyles.bodyFontFamily,
-                    fontSize: _getResponsiveSize(context, 18),
+                    fontSize: isMobile ? 10.0 : _getResponsiveSize(context, 18),
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(height: _getResponsiveSize(context, 4)),
+                SizedBox(height: isMobile ? 2.0 : _getResponsiveSize(context, 4)),
                 if (isRegistered)
                   Text(
                     '현재 등록된 포트',
                     style: TextStyle(
                       fontFamily: AppTextStyles.bodyFontFamily,
-                      fontSize: _getResponsiveSize(context, 18),
+                      fontSize: isMobile ? 10.0 : _getResponsiveSize(context, 18),
                       color: AppColors.primary,
                       fontVariations: <FontVariation>[
                         FontVariation('wght', 600),
@@ -548,7 +563,7 @@ class _UsbPortSelectionDialogState
                     '$otherDeviceType 장치에 이미 연결됨',
                     style: TextStyle(
                       fontFamily: AppTextStyles.bodyFontFamily,
-                      fontSize: _getResponsiveSize(context, 18),
+                      fontSize: isMobile ? 10.0 : _getResponsiveSize(context, 18),
                       color: Colors.orange.shade700,
                       fontVariations: <FontVariation>[
                         FontVariation('wght', 500),
@@ -560,7 +575,7 @@ class _UsbPortSelectionDialogState
             trailing: Icon(
               isRegistered ? Icons.check_circle : Icons.chevron_right,
               color: isRegistered ? AppColors.primary : Colors.grey,
-              size: _getResponsiveSize(context, 32),
+              size: isMobile ? 22.0 : _getResponsiveSize(context, 32),
             ),
             onTap: () => _saveMapping(device),
           ),
