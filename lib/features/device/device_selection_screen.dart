@@ -195,6 +195,17 @@ class _DeviceSelectionScreenState extends ConsumerState<DeviceSelectionScreen>
       BuildContext context, WidgetRef ref, String deviceId) {
     debugPrint('Selected device: $deviceId');
 
+    if (deviceId.toUpperCase() == 'AMP' || deviceId.toUpperCase() == 'BP_AMP') {
+      ref.read(selectedDeviceProvider.notifier).selectDevice('BP');
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const MeasurementScreen(deviceType: 'AMP'),
+        ),
+      );
+      return;
+    }
+
     if (deviceId.toUpperCase() == 'MF') {
       Navigator.push(
         context,
@@ -265,6 +276,7 @@ class _DeviceSelectionScreenState extends ConsumerState<DeviceSelectionScreen>
     final devices = [
       ...hwDevices,
       if (mfDevice != null) mfDevice.copyWith(isConnected: true),
+      const Device(type: 'AMP', name: '에이엠피올 BP 868F', isConnected: true),
     ];
     final topPadding = _getResponsiveSize(context, 20);
     final contentTopPadding = _getResponsiveSize(context, 50);

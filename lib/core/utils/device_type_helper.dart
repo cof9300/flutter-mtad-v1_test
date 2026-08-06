@@ -8,6 +8,9 @@ class DeviceTypeHelper {
     switch (type.toUpperCase()) {
       case 'BP':
         return l10n.deviceTypeBP;
+      case 'AMP':
+      case 'BP_AMP':
+        return '에이엠피올 (BP868F)';
       case 'HS':
         return l10n.deviceTypeHC;
       case 'VA':

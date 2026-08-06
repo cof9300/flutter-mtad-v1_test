@@ -105,9 +105,13 @@ class _MeasurementScreenState extends ConsumerState<MeasurementScreen>
         throw Exception('Token not found');
       }
 
+      final effectiveType = (widget.deviceType.toUpperCase() == 'AMP' || widget.deviceType.toUpperCase() == 'BP_AMP')
+          ? 'BP'
+          : widget.deviceType;
+
       final option = ServiceLocator()
           .contentStorageService
-          .getStoredDevicePageOption(widget.deviceType);
+          .getStoredDevicePageOption(effectiveType);
 
       if (option == null) {
         throw Exception('Device page option not found in storage');
@@ -119,13 +123,13 @@ class _MeasurementScreenState extends ConsumerState<MeasurementScreen>
       if (mounted) {
         ProgressModal.hide();
         final l10n = AppLocalizations.of(context)!;
-        final title = widget.deviceType.toUpperCase() == 'BP'
+        final title = (effectiveType.toUpperCase() == 'BP')
             ? l10n.bloodPressureMeasurementGuide
-            : widget.deviceType.toUpperCase() == 'HS'
+            : effectiveType.toUpperCase() == 'HS'
                 ? '신장체중 ${l10n.measurementGuide}'
-                : widget.deviceType.toUpperCase() == 'ST'
+                : effectiveType.toUpperCase() == 'ST'
                     ? '자율신경측정 안내'
-                    : '${widget.deviceType.toUpperCase()} ${l10n.measurementGuide}';
+                    : '${effectiveType.toUpperCase()} ${l10n.measurementGuide}';
         ref.read(headerTitleProvider.notifier).setTitle(title);
 
         setState(() {
@@ -184,12 +188,13 @@ class _MeasurementScreenState extends ConsumerState<MeasurementScreen>
 
   void _navigateToDemoResult() {
     final deviceUpper = widget.deviceType.toUpperCase();
-    if (deviceUpper == 'BP') {
+    if (deviceUpper == 'BP' || deviceUpper == 'AMP' || deviceUpper == 'BP_AMP') {
       final demoResult = BloodPressureResult(
         systolic: 120,
         diastolic: 80,
-        pulse: 72,
+        pulse: 75,
         measuredAt: DateTime.now(),
+        deviceModel: '에이엠피올 (BP868F)',
       );
 
       Navigator.push(
@@ -361,7 +366,7 @@ class _MeasurementScreenState extends ConsumerState<MeasurementScreen>
                   );
                 },
               ),
-              if (_isDemoMode)
+              if (_isDemoMode || widget.deviceType.toUpperCase() == 'AMP' || widget.deviceType.toUpperCase() == 'BP_AMP')
                 Positioned(
                   top: 16,
                   right: 16,
@@ -369,11 +374,13 @@ class _MeasurementScreenState extends ConsumerState<MeasurementScreen>
                     onTap: _navigateToDemoResult,
                     child: Container(
                       padding: screenWidth < 600
-                          ? const EdgeInsets.symmetric(horizontal: 8, vertical: 4)
-                          : const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                          ? const EdgeInsets.symmetric(horizontal: 10, vertical: 6)
+                          : const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
                       decoration: BoxDecoration(
-                        color: Colors.orange.withOpacity(0.9),
-                        borderRadius: BorderRadius.circular(screenWidth < 600 ? 4 : 8),
+                        color: (widget.deviceType.toUpperCase() == 'AMP' || widget.deviceType.toUpperCase() == 'BP_AMP')
+                            ? const Color(0xFF0066FF).withOpacity(0.9)
+                            : Colors.orange.withOpacity(0.9),
+                        borderRadius: BorderRadius.circular(screenWidth < 600 ? 6 : 10),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.2),
@@ -388,14 +395,16 @@ class _MeasurementScreenState extends ConsumerState<MeasurementScreen>
                           Icon(
                             Icons.play_arrow,
                             color: Colors.white,
-                            size: screenWidth < 600 ? 12 : 20,
+                            size: screenWidth < 600 ? 14 : 22,
                           ),
-                          SizedBox(width: screenWidth < 600 ? 3 : 6),
+                          SizedBox(width: screenWidth < 600 ? 4 : 8),
                           Text(
-                            'DEMO',
+                            (widget.deviceType.toUpperCase() == 'AMP' || widget.deviceType.toUpperCase() == 'BP_AMP')
+                                ? 'AMP 데모 측정 테스트'
+                                : 'DEMO',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: screenWidth < 600 ? 10 : 14,
+                              fontSize: screenWidth < 600 ? 11 : 15,
                               fontVariations: const <FontVariation>[
                                 FontVariation('wght', 700)
                               ],

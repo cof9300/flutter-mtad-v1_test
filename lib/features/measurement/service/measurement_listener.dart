@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:usb_serial/usb_serial.dart';
 import 'package:flutter_template/features/measurement/parser/bp500_parser.dart';
+import 'package:flutter_template/features/measurement/parser/amp_bp868_parser.dart';
 import 'package:flutter_template/features/measurement/parser/bp250_parser.dart';
 import 'package:flutter_template/features/measurement/parser/inbody_parser.dart';
 import 'package:flutter_template/features/measurement/parser/hc_parser.dart';
@@ -134,6 +135,17 @@ class MeasurementListener {
   Stream<HrvLiveData> get hrvLiveDataStream => _hrvLiveDataController.stream;
   Stream<int> get hrvStatusStream => _hrvStatusController.stream;
   Stream<int> get hrvErrorStream => _hrvErrorController.stream;
+
+  void simulateAmpMeasurement() {
+    final result = BloodPressureResult(
+      systolic: 120,
+      diastolic: 80,
+      pulse: 75,
+      measuredAt: DateTime.now(),
+      deviceModel: '에이엠피올 (BP868F)',
+    );
+    _bloodPressureController.add(result);
+  }
 
   // ─── Celvas 등록/해제 ──────────────────────────────────────────────────
 
@@ -967,6 +979,20 @@ class MeasurementListener {
         severity: 'INFO',
         deviceType: 'BP',
       );
+    }
+
+    if (AMP868Parser.canParseBytes(buffer)) {
+      final ampResult = AMP868Parser.parseBytes(buffer);
+      if (ampResult != null) {
+        int firstIdx = buffer.indexOf(AMP868Parser.headerByte);
+        int secondIdx = buffer.indexOf(AMP868Parser.headerByte, firstIdx + 1);
+        if (firstIdx != -1 && secondIdx != -1) {
+          buffer.removeRange(0, secondIdx + 1);
+        }
+        FlutterErrorLogger.logInfo('[MeasurementListener] 에이엠피올 BP 868F 결과 파싱 완료 -> 수축기: ${ampResult.systolic}, 이완기: ${ampResult.diastolic}, 맥박: ${ampResult.pulse}');
+        _bloodPressureController.add(ampResult);
+        return;
+      }
     }
 
     if (deviceType.toUpperCase() == 'HS') {

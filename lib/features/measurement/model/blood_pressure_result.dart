@@ -3,12 +3,14 @@ class BloodPressureResult {
   final int diastolic;
   final int pulse;
   final DateTime measuredAt;
+  final String? deviceModel;
 
   BloodPressureResult({
     required this.systolic,
     required this.diastolic,
     required this.pulse,
     required this.measuredAt,
+    this.deviceModel,
   });
 
   Map<String, dynamic> toJson() {
@@ -17,6 +19,7 @@ class BloodPressureResult {
       'diastolic': diastolic,
       'pulse': pulse,
       'measuredAt': measuredAt.toIso8601String(),
+      'deviceModel': deviceModel,
     };
   }
 
@@ -26,6 +29,7 @@ class BloodPressureResult {
       diastolic: json['diastolic'] as int,
       pulse: json['pulse'] as int,
       measuredAt: DateTime.parse(json['measuredAt'] as String),
+      deviceModel: json['deviceModel'] as String?,
     );
   }
 

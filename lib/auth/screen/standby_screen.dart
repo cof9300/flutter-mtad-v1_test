@@ -139,18 +139,8 @@ class _StandbyScreenState extends ConsumerState<StandbyScreen>
     _waitContentActive.value = true; // 대기화면 복귀 → BGM 재개
 
     try {
-      ref.read(waitContentProvider.notifier).clearContents();
-    } catch (e) {}
-
-    await Future.delayed(const Duration(milliseconds: 50));
-
-    try {
       ref.read(userAuthProvider.notifier).clearUserAuth();
       ref.read(measureIdProvider.notifier).clearMeasureId();
-      ref.read(resultPageOptionProvider.notifier).clearResultPageOption();
-      ref.read(headerLogoProvider.notifier).clearLogo();
-      ref.read(headerTitleProvider.notifier).clearTitle();
-      ref.read(agreementOptionProvider.notifier).clearAgreementOption();
       ref.read(localeProvider.notifier).resetToDefaultLocale();
       ref.read(guestModeProvider.notifier).clearGuestMode();
       ref.read(guestMeasureFlagProvider.notifier).clearGuestMeasureFlag();
@@ -164,23 +154,18 @@ class _StandbyScreenState extends ConsumerState<StandbyScreen>
       _serviceLocator.guestPhoneStorage.clearPhoneNumber();
     } catch (e) {}
 
-    try {
-      PaintingBinding.instance.imageCache.clear();
-      PaintingBinding.instance.imageCache.clearLiveImages();
-      PaintingBinding.instance.imageCache.maximumSize = 20;
-      PaintingBinding.instance.imageCache.maximumSizeBytes = 20 * 1024 * 1024;
-    } catch (e) {}
-
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(milliseconds: 300), () {
-        if (mounted &&
-            !_isInvalidKioskIdModalShown &&
-            !_isKioskIdModalShown &&
-            !_isSystemErrorModalShown) {
-          _resetAndInitialize();
-        }
+    if (!_isKioskInitialized) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Future.delayed(const Duration(milliseconds: 300), () {
+          if (mounted &&
+              !_isInvalidKioskIdModalShown &&
+              !_isKioskIdModalShown &&
+              !_isSystemErrorModalShown) {
+            _resetAndInitialize();
+          }
+        });
       });
-    });
+    }
   }
 
   void _resetAndInitialize() {
